@@ -1,0 +1,1277 @@
+/**
+ * Core Moves Module - Basic move rendering functionality
+ */
+
+window.MovesCore = (function() {
+    'use strict';
+
+    /**
+     * Create move checkboxes (single or multiple)
+     */
+    function createMoveCheckboxes(move, available, urlParams) {
+        const checkboxCount = move.multiple || 1;
+        const checkboxes = [];
+        
+        for (let i = 0; i < checkboxCount; i++) {
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            
+            // Add data attribute to identify the parent move
+            checkbox.setAttribute('data-move-id', move.id);
+            
+            if (checkboxCount === 1) {
+                // Single checkbox - use original ID format
+                checkbox.id = `move_${move.id}`;
+                checkbox.name = `move_${move.id}`;
+                checkbox.setAttribute('aria-label', `Toggle ${move.title}`);
+            } else {
+                // Multiple checkboxes - add instance number
+                checkbox.id = `move_${move.id}_${i + 1}`;
+                checkbox.name = `move_${move.id}_${i + 1}`;
+                checkbox.setAttribute('aria-label', `${move.title} - Instance ${i + 1}`);
+            }
+            
+            // Check if there's a saved state in URL first
+            if (urlParams.has(checkbox.id)) {
+                checkbox.checked = urlParams.get(checkbox.id) === '1';
+            } else {
+                // For multiple checkboxes, only check the first one if default is true
+                checkbox.checked = (i === 0 && available[move.id]) || false;
+            }
+            
+            // Disable the first checkbox if the move is always available (true in availability map)
+            if (i === 0 && available[move.id] === true) {
+                checkbox.disabled = true;
+                checkbox.checked = true; // Always ensure disabled checkboxes are checked
+                checkbox.setAttribute('title', 'This move is always available for this role');
+                // Mark as no-persist to save URL space (it's true by default)
+                checkbox.setAttribute('data-no-persist', 'true');
+            }
+            
+            checkboxes.push(checkbox);
+        }
+        
+        return checkboxes;
+    }
+
+    /**
+     * Create move title with checkboxes and optional track display
+     * @param {Object} move - The move data
+     * @param {Array} checkboxes - Array of checkbox elements
+     * @param {URLSearchParams} urlParams - URL parameters
+     * @param {boolean} isNestedInCard - Whether this move is nested inside a granted card
+     * @param {Object} available - Available moves map (needed for hideCheckbox logic)
+     * @returns {Object} Object with titleContainer and optional trackDisplay (for grid mode)
+     */
+    function createMoveTitle(move, checkboxes, urlParams, isNestedInCard = false, available = null) {
+        const titleContainer = document.createElement("div");
+        titleContainer.className = "move-title";
+        // Make the whole title area act as a disclosure control (except interactive elements)
+        titleContainer.setAttribute('role', 'button');
+        titleContainer.setAttribute('tabindex', '0');
+        // Default expanded on initial render; collapse functions will update as needed
+        titleContainer.setAttribute('aria-expanded', 'true');
+        
+        if (checkboxes.length === 1) {
+            // Single checkbox - do NOT wrap in a label so title clicks don't toggle the checkbox
+            const checkbox = checkboxes[0];
+            checkbox.setAttribute('aria-label', checkbox.getAttribute('aria-label') || `Toggle ${move.title}`);
+            
+            const titleText = document.createElement("span");
+            titleText.className = "move-title-text";
+            titleText.innerHTML = window.TextFormatter ? window.TextFormatter.format(move.title) : move.title;
+            
+            // Hide checkbox if hideCheckbox is true AND move is force-ticked
+            const shouldHideCheckbox = move.hideCheckbox === true && available && available[move.id] === true;
+            
+            if (!shouldHideCheckbox) {
+                titleContainer.appendChild(checkbox);
+            }
+            titleContainer.appendChild(titleText);
+        } else {
+            // Multiple checkboxes - put checkboxes inline before title
+            const checkboxContainer = document.createElement("div");
+            checkboxContainer.className = "move-checkboxes";
+            
+            checkboxes.forEach((checkbox) => {
+                checkboxContainer.appendChild(checkbox);
+            });
+            
+            const titleText = document.createElement("span");
+            titleText.className = "move-title-text";
+            titleText.innerHTML = window.TextFormatter ? window.TextFormatter.format(move.title) : move.title;
+            
+            // Hide checkboxes if hideCheckbox is true AND move is force-ticked
+            const shouldHideCheckbox = move.hideCheckbox === true && available && available[move.id] === true;
+            
+            if (!shouldHideCheckbox) {
+                titleContainer.appendChild(checkboxContainer);
+            }
+            titleContainer.appendChild(titleText);
+        }
+        
+        // Determine if we need to handle track display
+        let trackDisplayForGrid = null;
+        const useGridLayout = move.tracks && move.tracks.length > 3;
+        
+        // Add track display if move has tracking (support both single track and multiple tracks)
+        if ((move.track || move.tracks) && window.Track) {
+            console.log('MovesCore: Found track/tracks for move:', move.id, 'calling createTrackDisplay');
+            const trackDisplay = window.Track.createTrackDisplay(move, urlParams);
+            if (trackDisplay) {
+                if (useGridLayout) {
+                    // For grid layout (many tracks), return separately to be placed after title
+                    console.log('MovesCore: Storing track display for grid layout for move:', move.id);
+                    trackDisplayForGrid = trackDisplay;
+                } else {
+                    // For normal layout (few tracks), add to title as before
+                    console.log('MovesCore: Adding track display to title container for move:', move.id);
+                    titleContainer.appendChild(trackDisplay);
+                }
+            } else {
+                console.log('MovesCore: createTrackDisplay returned null for move:', move.id);
+            }
+        } else {
+            console.log('MovesCore: No track system or no tracks for move:', move.id, 'track:', move.track, 'tracks:', move.tracks, 'window.Track:', !!window.Track);
+        }
+        
+        // Add collapse/expand indicator (non-focusable, decorative)
+        const collapseToggle = document.createElement("span");
+        collapseToggle.className = "move-collapse-toggle";
+        collapseToggle.setAttribute('aria-label', `Toggle ${move.title} details`);
+        collapseToggle.setAttribute('role', 'presentation');
+        collapseToggle.setAttribute('aria-hidden', 'true');
+        collapseToggle.innerHTML = "-"; // Minus sign (expanded state)
+        
+        // Clicking the title background or text (but not inputs/buttons) toggles expand/collapse
+        titleContainer.addEventListener('click', function(e) {
+            // Ignore clicks on interactive elements to preserve their behavior
+            if (e.target.closest('input, button, select, textarea, a, label, .track-shape')) {
+                return;
+            }
+            toggleMoveCollapse(collapseToggle);
+        });
+        
+        // Keyboard accessibility: Space/Enter on title toggles
+        titleContainer.addEventListener('keydown', function(e) {
+            // Only handle keyboard events if they originated from the title container itself,
+            // not from interactive elements within it
+            if (e.target !== titleContainer) {
+                return;
+            }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMoveCollapse(collapseToggle);
+            }
+        });
+        
+        titleContainer.appendChild(collapseToggle);
+        
+        // Return both title container and optional track display for grid mode
+        return {
+            titleContainer: titleContainer,
+            trackDisplayForGrid: trackDisplayForGrid
+        };
+    }
+
+    /**
+     * Create description display
+     */
+    function createDescription(move) {
+        if (!move.description || move.description.trim() === "") {
+            return null;
+        }
+        
+        const descriptionDiv = document.createElement("div");
+        descriptionDiv.className = "move-description";
+        
+        const p = document.createElement("p");
+        p.innerHTML = window.TextFormatter ? window.TextFormatter.format(move.description) : move.description;
+        descriptionDiv.appendChild(p);
+        
+        return descriptionDiv;
+    }
+
+    /**
+     * Create outcome display
+     */
+    function createOutcome(outcome) {
+        const outcomeDiv = document.createElement("div");
+        outcomeDiv.className = "outcome";
+
+        const formattedText = window.TextFormatter ? window.TextFormatter.format(outcome.text) : outcome.text;
+
+        if (outcome.range && outcome.range.trim() !== "") {
+            // Create a container div to handle range + text with better line break support
+            const rangeSpan = document.createElement("strong");
+            rangeSpan.className = "outcome-range";
+            rangeSpan.textContent = outcome.range + ":";
+
+            const textSpan = document.createElement("span");
+            textSpan.className = "outcome-text";
+            textSpan.innerHTML = " " + formattedText;
+
+            outcomeDiv.appendChild(rangeSpan);
+            outcomeDiv.appendChild(textSpan);
+        } else {
+            // No range, just add the text directly
+            const textDiv = document.createElement("div");
+            textDiv.className = "outcome-text";
+            textDiv.innerHTML = formattedText;
+            outcomeDiv.appendChild(textDiv);
+        }
+
+        if (outcome.bullets && outcome.bullets.length) {
+            const ul = document.createElement("ul");
+            outcome.bullets.forEach(bulletText => {
+                const li = document.createElement("li");
+                li.innerHTML = window.TextFormatter ? window.TextFormatter.format(bulletText) : bulletText;
+                ul.appendChild(li);
+            });
+            outcomeDiv.appendChild(ul);
+        }
+
+        return outcomeDiv;
+    }
+
+    /**
+     * Create submove section
+     */
+    function createSubmove(submove) {
+        const submoveDiv = document.createElement("div");
+        submoveDiv.className = "submove";
+
+        // Submove title
+        const submoveTitle = document.createElement("div");
+        submoveTitle.className = "submove-title";
+        submoveTitle.innerHTML = window.TextFormatter ? window.TextFormatter.format(submove.title) : submove.title;
+        submoveDiv.appendChild(submoveTitle);
+
+        // Submove description (if exists)
+        if (submove.description && submove.description.trim() !== "") {
+            const submoveDesc = document.createElement("div");
+            submoveDesc.className = "submove-description";
+            const p = document.createElement("p");
+            p.innerHTML = window.TextFormatter ? window.TextFormatter.format(submove.description) : submove.description;
+            submoveDesc.appendChild(p);
+            submoveDiv.appendChild(submoveDesc);
+        }
+
+        // Submove outcomes (if they exist)
+        if (submove.outcomes && Array.isArray(submove.outcomes) && submove.outcomes.length > 0) {
+            submove.outcomes.forEach(outcome => {
+                if (outcome) {
+                    const outcomeElement = createOutcome(outcome);
+                    submoveDiv.appendChild(outcomeElement);
+                }
+            });
+        }
+
+        return submoveDiv;
+    }
+
+    /**
+     * Create granted card section
+     * Supports multiple card instances when grantsCardAllowsDuplicates: true
+     */
+    function createGrantedCardSection(move, urlParams, available) {
+        if (!move.grantsCard || !window.InlineCards) {
+            return null;
+        }
+
+        // Check if this move should create multiple card instances
+        const allowsDuplicates = move.grantsCardAllowsDuplicates === true;
+        const instanceCount = (allowsDuplicates && move.multiple) ? move.multiple : 1;
+
+        // Container to hold all card sections
+        const wrapper = document.createElement('div');
+        wrapper.className = 'granted-cards-wrapper';
+
+        for (let i = 0; i < instanceCount; i++) {
+            const instance = i + 1;
+            const suffix = (instanceCount > 1) ? instance.toString() : null;
+            const containerId = suffix
+                ? `granted_card_${move.id}_${suffix}`
+                : `granted_card_${move.id}`;
+
+            const checkboxId = suffix
+                ? `move_${move.id}_${suffix}`
+                : `move_${move.id}`;
+
+            const cardSection = window.InlineCards.createCardContainer(
+                containerId,
+                instanceCount > 1 ? `Grants (${instance}/${instanceCount}):` : "Grants:"
+            );
+
+            // Check if this specific instance is taken
+            const isChecked = urlParams.has(checkboxId)
+                ? urlParams.get(checkboxId) === '1'
+                : (i === 0 && available[move.id]); // Only first instance default-checked
+
+            console.log(`createGrantedCardSection for move ${move.id} instance ${instance}:`, {
+                moveId: move.id,
+                grantsCard: move.grantsCard,
+                suffix: suffix,
+                isChecked: isChecked,
+                containerId: containerId,
+                checkboxId: checkboxId
+            });
+
+            if (isChecked) {
+                // Show the card after the container is added to the DOM
+                setTimeout(() => {
+                    console.log(`Move ${move.id} instance ${instance}: Displaying card ${move.grantsCard}`);
+                    window.InlineCards.displayCard(containerId, move.grantsCard);
+                }, 0);
+            } else {
+                // Hide initially
+                cardSection.style.display = 'none';
+            }
+
+            wrapper.appendChild(cardSection);
+        }
+
+        return wrapper;
+    }
+
+    /**
+     * Create details input section
+     */
+    function createDetailsInput(move, urlParams) {
+        const detailsDiv = document.createElement("div");
+        detailsDiv.className = "move-details";
+        
+        const label = document.createElement("label");
+        label.setAttribute('for', `move_${move.id}_dtl`);
+        label.textContent = "Details:";
+        
+        const textarea = document.createElement("textarea");
+        textarea.id = `move_${move.id}_dtl`;
+        textarea.name = `move_${move.id}_dtl`;
+        textarea.placeholder = "Add additional details...";
+        textarea.setAttribute('aria-label', `Details for ${move.title}`);
+        textarea.setAttribute('data-move-id', move.id);
+        textarea.rows = 2; // Start with 2 rows
+        
+        // Restore value from URL if exists
+        if (urlParams.has(textarea.id)) {
+            textarea.value = urlParams.get(textarea.id);
+        }
+        
+        // Auto-grow functionality
+        const autoGrow = function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        };
+        
+        textarea.addEventListener('input', autoGrow);
+        
+        // Apply initial height after a short delay to ensure proper sizing
+        setTimeout(() => {
+            autoGrow.call(textarea);
+        }, 0);
+        
+        detailsDiv.appendChild(label);
+        detailsDiv.appendChild(textarea);
+        
+        return detailsDiv;
+    }
+
+    /**
+     * Create pick options section
+     */
+    function createPickOptions(move, urlParams) {
+        const pickDiv = document.createElement("div");
+        pickDiv.className = "pick-options";
+        
+        const pickTitle = document.createElement("strong");
+        pickTitle.textContent = "Pick:";
+        pickDiv.appendChild(pickTitle);
+        
+        const multiplePick = move.multiplePick || 1;
+        const useColumns = move.pick.length > 10;
+        
+        if (multiplePick > 1) {
+            // Create list with multiple checkboxes per option (like multiple moves)
+            const pickList = document.createElement("ul");
+            if (useColumns) {
+                pickList.className = "pick-list-columns";
+            }
+            
+            move.pick.forEach((option, optionIndex) => {
+                const li = document.createElement("li");
+                li.className = "pick-option-item";
+                
+                // Create multiple checkboxes for this option
+                const checkboxContainer = document.createElement("div");
+                checkboxContainer.className = "pick-checkboxes";
+                
+                for (let col = 1; col <= multiplePick; col++) {
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    
+                    // ID format: first column uses _p1, _p2, etc. Additional columns use _p1_c2, _p1_c3, etc.
+                    const baseId = `move_${move.id}_p${optionIndex + 1}`;
+                    checkbox.id = col === 1 ? baseId : `${baseId}_c${col}`;
+                    checkbox.name = checkbox.id;
+                    checkbox.setAttribute('aria-label', `Pick ${option} (Instance ${col})`);
+                    checkbox.setAttribute('data-move-id', move.id);
+                    
+                    // Restore from URL if exists
+                    if (urlParams.has(checkbox.id)) {
+                        checkbox.checked = urlParams.get(checkbox.id) === '1';
+                    }
+                    
+                    checkboxContainer.appendChild(checkbox);
+                }
+                
+                // Add the option text after all checkboxes
+                const optionText = document.createElement("span");
+                optionText.className = "pick-option-text";
+                optionText.innerHTML = window.TextFormatter ? window.TextFormatter.format(option) : option;
+                
+                li.appendChild(checkboxContainer);
+                li.appendChild(optionText);
+                pickList.appendChild(li);
+            });
+            
+            pickDiv.appendChild(pickList);
+        } else {
+            // Single column layout (original behavior) or 2-column layout for large lists
+            const pickList = document.createElement("ul");
+            if (useColumns) {
+                pickList.className = "pick-list-columns";
+            }
+            
+            move.pick.forEach((option, index) => {
+                const li = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                
+                checkbox.id = `move_${move.id}_p${index + 1}`;
+                checkbox.name = `move_${move.id}_p${index + 1}`;
+                checkbox.setAttribute('aria-label', `Pick ${option}`);
+                checkbox.setAttribute('data-move-id', move.id);
+                
+                // Restore from URL if exists
+                if (urlParams.has(checkbox.id)) {
+                    checkbox.checked = urlParams.get(checkbox.id) === '1';
+                }
+                
+                const label = document.createElement("label");
+                label.setAttribute('for', checkbox.id);
+                label.appendChild(checkbox);
+                const textSpan = document.createElement("span");
+                textSpan.innerHTML = window.TextFormatter ? window.TextFormatter.format(option) : option;
+                label.appendChild(textSpan);
+                
+                li.appendChild(label);
+                pickList.appendChild(li);
+            });
+            
+            pickDiv.appendChild(pickList);
+        }
+        
+        return pickDiv;
+    }
+
+    /**
+     * Create pickOne options section (radio buttons)
+     */
+    function createPickOneOptions(move, urlParams) {
+        const pickOneDiv = document.createElement("div");
+        pickOneDiv.className = "pick-one-options";
+        
+        const pickOneTitle = document.createElement("strong");
+        pickOneTitle.textContent = "Pick One:";
+        pickOneDiv.appendChild(pickOneTitle);
+        
+        const multiplePick = move.multiplePick || 1;
+        const useColumns = move.pickOne.length > 10;
+        
+        if (multiplePick > 1) {
+            // Create list with multiple radio buttons per option (like multiple moves)
+            const pickOneList = document.createElement("ul");
+            if (useColumns) {
+                pickOneList.className = "pick-list-columns";
+            }
+            
+            move.pickOne.forEach((option, optionIndex) => {
+                const li = document.createElement("li");
+                li.className = "pick-one-option-item";
+                
+                // Create multiple radio buttons for this option
+                const radioContainer = document.createElement("div");
+                radioContainer.className = "pick-one-radios";
+                
+                for (let col = 1; col <= multiplePick; col++) {
+                    const radio = document.createElement("input");
+                    radio.type = "radio";
+                    
+                    // Each column gets its own radio group
+                    radio.name = col === 1 ? `move_${move.id}_pickone` : `move_${move.id}_pickone_c${col}`;
+                    
+                    // ID format: first column uses _o1, _o2, etc. Additional columns use _o1_c2, _o1_c3, etc.
+                    const baseId = `move_${move.id}_o${optionIndex + 1}`;
+                    radio.id = col === 1 ? baseId : `${baseId}_c${col}`;
+                    radio.value = `${optionIndex + 1}`;
+                    radio.setAttribute('aria-label', `Pick one: ${option} (Instance ${col})`);
+                    radio.setAttribute('data-move-id', move.id);
+                    
+                    // Restore from URL if exists
+                    if (urlParams.has(radio.id)) {
+                        radio.checked = urlParams.get(radio.id) === '1';
+                    }
+                    
+                    radioContainer.appendChild(radio);
+                }
+                
+                // Add the option text after all radio buttons
+                const optionText = document.createElement("span");
+                optionText.className = "pick-one-option-text";
+                optionText.innerHTML = window.TextFormatter ? window.TextFormatter.format(option) : option;
+                
+                li.appendChild(radioContainer);
+                li.appendChild(optionText);
+                pickOneList.appendChild(li);
+            });
+            
+            pickOneDiv.appendChild(pickOneList);
+        } else {
+            // Single column layout (original behavior) or 2-column layout for large lists
+            const pickOneList = document.createElement("ul");
+            if (useColumns) {
+                pickOneList.className = "pick-list-columns";
+            }
+            
+            const radioGroupName = `move_${move.id}_pickone`;
+            
+            move.pickOne.forEach((option, index) => {
+                const li = document.createElement("li");
+                const radio = document.createElement("input");
+                radio.type = "radio";
+                radio.name = radioGroupName;
+                
+                radio.id = `move_${move.id}_o${index + 1}`;
+                radio.value = `${index + 1}`;
+                radio.setAttribute('aria-label', `Pick one: ${option}`);
+                radio.setAttribute('data-move-id', move.id);
+                
+                // Restore from URL if exists
+                if (urlParams.has(radio.id)) {
+                    radio.checked = urlParams.get(radio.id) === '1';
+                }
+                
+                const label = document.createElement("label");
+                label.setAttribute('for', radio.id);
+                label.appendChild(radio);
+                const textSpan = document.createElement("span");
+                textSpan.innerHTML = window.TextFormatter ? window.TextFormatter.format(option) : option;
+                label.appendChild(textSpan);
+                
+                li.appendChild(label);
+                pickOneList.appendChild(li);
+            });
+            
+            pickOneDiv.appendChild(pickOneList);
+        }
+        
+        return pickOneDiv;
+    }
+
+    /**
+     * Render a single move
+     * @param {Object} move - The move data
+     * @param {Object} available - Available moves map
+     * @param {URLSearchParams} urlParams - URL parameters
+     * @param {boolean} isNestedInCard - Whether this move is nested inside a granted card
+     */
+    function renderMove(move, available, urlParams, isNestedInCard = false) {
+        console.log(`renderMove called for move: ${move.id}, grantsCard: ${move.grantsCard}`);
+        const moveDiv = document.createElement("div");
+        moveDiv.className = "move";
+
+        // Add data attribute to identify the move (needed for navigation)
+        moveDiv.setAttribute('data-move-id', move.id);
+
+        // Find which roles grant this move (for styling purposes)
+        const grantingRoles = [];
+        const currentRoles = window.Utils ? window.Utils.getCurrentRoles() : [];
+        if (window.availableMap && currentRoles.length > 0) {
+            currentRoles.forEach(role => {
+                const roleData = window.availableMap[role];
+                if (roleData) {
+                    grantingRoles.push(role);
+                }
+            });
+        }
+
+        // Add data attribute for styling based on granting roles
+        if (grantingRoles.length > 0) {
+            moveDiv.setAttribute('data-granting-roles', grantingRoles.join(','));
+        }
+
+        // Create checkboxes and title
+        const checkboxes = createMoveCheckboxes(move, available, urlParams);
+        const titleResult = createMoveTitle(move, checkboxes, urlParams, isNestedInCard, available);
+        moveDiv.appendChild(titleResult.titleContainer);
+        
+        // If there's a grid-mode track display, add it after the title but before content
+        if (titleResult.trackDisplayForGrid) {
+            moveDiv.appendChild(titleResult.trackDisplayForGrid);
+        }
+        
+        // Create collapsible content container
+        const contentContainer = document.createElement("div");
+        contentContainer.className = "move-content";
+        
+        // Add description if it exists
+        const descriptionElement = createDescription(move);
+        if (descriptionElement) {
+            contentContainer.appendChild(descriptionElement);
+        }
+        
+        // Add outcomes if they exist
+        if (move.outcomes && Array.isArray(move.outcomes) && move.outcomes.length > 0) {
+            move.outcomes.forEach(outcome => {
+                if (outcome) {
+                    const outcomeElement = createOutcome(outcome);
+                    contentContainer.appendChild(outcomeElement);
+                }
+            });
+        }
+
+        // Add submoves if they exist
+        if (move.submoves && Array.isArray(move.submoves) && move.submoves.length > 0) {
+            move.submoves.forEach(submove => {
+                if (submove) {
+                    const submoveElement = createSubmove(submove);
+                    contentContainer.appendChild(submoveElement);
+                }
+            });
+        }
+
+        // Add pickOne options if they exist (render first as they're typically more fundamental)
+        if (move.pickOne && Array.isArray(move.pickOne) && move.pickOne.length > 0) {
+            const pickOneElement = createPickOneOptions(move, urlParams);
+            contentContainer.appendChild(pickOneElement);
+        }
+        
+        // Add pick options if they exist (render after pickOne as they're typically add-on features)
+        if (move.pick && Array.isArray(move.pick) && move.pick.length > 0) {
+            const pickElement = createPickOptions(move, urlParams);
+            contentContainer.appendChild(pickElement);
+        }
+        
+        // Add takeFrom section if it exists
+        if (move.takeFrom && Array.isArray(move.takeFrom) && move.takeFrom.length > 0) {
+            if (window.TakeFrom) {
+                const takeFromSection = window.TakeFrom.createTakeFromSection(move, urlParams);
+                contentContainer.appendChild(takeFromSection);
+            }
+        }
+        
+        // Add granted card section if move grants a card
+        if (move.grantsCard) {
+            console.log(`renderMove: Move ${move.id} has grantsCard: ${move.grantsCard}`);
+            const grantedCardSection = createGrantedCardSection(move, urlParams, available);
+            if (grantedCardSection) {
+                contentContainer.appendChild(grantedCardSection);
+            } else {
+                console.warn(`renderMove: createGrantedCardSection returned null for move ${move.id}`);
+            }
+        }
+        
+        // Add details input if specified
+        if (move.details) {
+            const detailsElement = createDetailsInput(move, urlParams);
+            contentContainer.appendChild(detailsElement);
+        }
+        
+        // Append content container to move div
+        moveDiv.appendChild(contentContainer);
+        
+        return moveDiv;
+    }
+
+    /**
+     * Create category header element
+     * @param {string} categoryName - The name of the category
+     * @param {number} moveCount - Number of moves in this category
+     */
+    function createCategoryHeader(categoryName, moveCount = 1) {
+        const headerElement = document.createElement("h3");
+        headerElement.className = "category-header tree-node";
+        
+        // Always add collapse functionality for tree-like appearance
+        headerElement.classList.add('collapsible');
+        
+        // Start collapsed by default
+        headerElement.classList.add('collapsed');
+        
+        // Create expand/collapse triangle
+        const triangle = document.createElement("span");
+        triangle.className = "tree-triangle";
+        triangle.innerHTML = "▶"; // Right arrow (collapsed state)
+        
+        // Create text span
+        const textSpan = document.createElement("span");
+        textSpan.className = "category-header-text";
+        textSpan.textContent = categoryName;
+        
+        // Create move count indicator
+        const countSpan = document.createElement("span");
+        countSpan.className = "category-move-count";
+        countSpan.textContent = `(${moveCount})`;
+        
+        // Make header clickable
+        headerElement.style.cursor = 'pointer';
+        headerElement.setAttribute('role', 'button');
+        headerElement.setAttribute('tabindex', '0');
+        headerElement.setAttribute('aria-expanded', 'false'); // Start collapsed
+        headerElement.setAttribute('aria-label', `Toggle ${categoryName} category with ${moveCount} move${moveCount === 1 ? '' : 's'}`);
+        
+        // Add click handler
+        headerElement.addEventListener('click', function() {
+            toggleCategoryCollapse(headerElement);
+        });
+        
+        // Add keyboard handler
+        headerElement.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleCategoryCollapse(headerElement);
+            }
+        });
+        
+        headerElement.appendChild(triangle);
+        headerElement.appendChild(textSpan);
+        headerElement.appendChild(countSpan);
+        
+        return headerElement;
+    }
+
+    /**
+     * Toggle collapse/expand state for a category
+     */
+    function toggleCategoryCollapse(headerElement) {
+        const triangle = headerElement.querySelector('.tree-triangle');
+        if (!triangle) return;
+        
+        const isCurrentlyCollapsed = headerElement.classList.contains('collapsed');
+        
+        // Find all moves in this category (next siblings until next header or end)
+        const categoryMoves = [];
+        let nextElement = headerElement.nextElementSibling;
+        
+        while (nextElement && !nextElement.classList.contains('category-header')) {
+            if (nextElement.classList.contains('move')) {
+                categoryMoves.push(nextElement);
+            }
+            nextElement = nextElement.nextElementSibling;
+        }
+        
+        if (isCurrentlyCollapsed) {
+            // Expand
+            headerElement.classList.remove('collapsed');
+            triangle.textContent = "▼"; // Down arrow
+            headerElement.setAttribute('aria-expanded', 'true');
+            categoryMoves.forEach(move => {
+                move.style.display = '';
+            });
+        } else {
+            // Collapse
+            headerElement.classList.add('collapsed');
+            triangle.textContent = "▶"; // Right arrow
+            headerElement.setAttribute('aria-expanded', 'false');
+            categoryMoves.forEach(move => {
+                move.style.display = 'none';
+            });
+        }
+    }
+    
+    /**
+     * Toggle collapse/expand state for a single move
+     */
+    function toggleMoveCollapse(toggleButton) {
+        const moveDiv = toggleButton.closest('.move');
+        if (!moveDiv) return;
+        
+        const contentContainer = moveDiv.querySelector('.move-content');
+        if (!contentContainer) return;
+        
+        const isCurrentlyCollapsed = contentContainer.classList.contains('collapsed');
+        
+        if (isCurrentlyCollapsed) {
+            // Expand - show minus sign
+            contentContainer.classList.remove('collapsed');
+            toggleButton.classList.remove('collapsed');
+            toggleButton.innerHTML = '-'; // Minus (expanded state)
+            toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Expand', 'Collapse'));
+            const titleEl = moveDiv.querySelector('.move-title');
+            if (titleEl) titleEl.setAttribute('aria-expanded', 'true');
+        } else {
+            // Collapse - show plus sign
+            contentContainer.classList.add('collapsed');
+            toggleButton.classList.add('collapsed');
+            toggleButton.innerHTML = '+'; // Plus (collapsed state)
+            toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Collapse', 'Expand'));
+            const titleEl = moveDiv.querySelector('.move-title');
+            if (titleEl) titleEl.setAttribute('aria-expanded', 'false');
+        }
+    }
+    
+    /**
+     * Collapse all moves and categories
+     */
+    function collapseAllMoves() {
+        // Collapse all individual moves
+        const allMoves = document.querySelectorAll('.move');
+        allMoves.forEach(moveDiv => {
+            const contentContainer = moveDiv.querySelector('.move-content');
+            const toggleButton = moveDiv.querySelector('.move-collapse-toggle');
+            
+            if (contentContainer && toggleButton) {
+                contentContainer.classList.add('collapsed');
+                toggleButton.classList.add('collapsed');
+                toggleButton.innerHTML = '+'; // Plus (collapsed state)
+                toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Collapse', 'Expand'));
+                const titleEl = moveDiv.querySelector('.move-title');
+                if (titleEl) titleEl.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Collapse all categories
+        const allCategories = document.querySelectorAll('.category-header.tree-node');
+        allCategories.forEach(headerElement => {
+            const triangle = headerElement.querySelector('.tree-triangle');
+            if (!triangle) return;
+            
+            // Find all moves in this category (next siblings until next header or end)
+            const categoryMoves = [];
+            let nextElement = headerElement.nextElementSibling;
+            
+            while (nextElement && !nextElement.classList.contains('category-header')) {
+                if (nextElement.classList.contains('move')) {
+                    categoryMoves.push(nextElement);
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            // Collapse category
+            headerElement.classList.add('collapsed');
+            triangle.textContent = "▶"; // Right arrow
+            headerElement.setAttribute('aria-expanded', 'false');
+            categoryMoves.forEach(move => {
+                move.style.display = 'none';
+            });
+        });
+    }
+    
+    /**
+     * Expand all moves and categories
+     */
+    function expandAllMoves() {
+        // Expand all categories first so moves become visible
+        const allCategories = document.querySelectorAll('.category-header.tree-node');
+        allCategories.forEach(headerElement => {
+            const triangle = headerElement.querySelector('.tree-triangle');
+            if (!triangle) return;
+            
+            // Find all moves in this category (next siblings until next header or end)
+            const categoryMoves = [];
+            let nextElement = headerElement.nextElementSibling;
+            
+            while (nextElement && !nextElement.classList.contains('category-header')) {
+                if (nextElement.classList.contains('move')) {
+                    categoryMoves.push(nextElement);
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            // Expand category
+            headerElement.classList.remove('collapsed');
+            triangle.textContent = "▼"; // Down arrow
+            headerElement.setAttribute('aria-expanded', 'true');
+            categoryMoves.forEach(move => {
+                move.style.display = '';
+            });
+        });
+        
+        // Then expand all individual moves
+        const allMoves = document.querySelectorAll('.move');
+        allMoves.forEach(moveDiv => {
+            const contentContainer = moveDiv.querySelector('.move-content');
+            const toggleButton = moveDiv.querySelector('.move-collapse-toggle');
+            
+            if (contentContainer && toggleButton) {
+                contentContainer.classList.remove('collapsed');
+                toggleButton.classList.remove('collapsed');
+                toggleButton.innerHTML = '-' ; // Minus (expanded state)
+                toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Expand', 'Collapse'));
+                const titleEl = moveDiv.querySelector('.move-title');
+                if (titleEl) titleEl.setAttribute('aria-expanded', 'true');
+            }
+        });
+    }
+    
+    /**
+     * Collapse all categories
+     */
+    function collapseAllCategories() {
+        const allCategories = document.querySelectorAll('.category-header.tree-node');
+        allCategories.forEach(headerElement => {
+            const triangle = headerElement.querySelector('.tree-triangle');
+            if (!triangle) return;
+            
+            // Find all moves in this category (next siblings until next header or end)
+            const categoryMoves = [];
+            let nextElement = headerElement.nextElementSibling;
+            
+            while (nextElement && !nextElement.classList.contains('category-header')) {
+                if (nextElement.classList.contains('move')) {
+                    categoryMoves.push(nextElement);
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            // Collapse category
+            headerElement.classList.add('collapsed');
+            triangle.textContent = "▶"; // Right arrow
+            headerElement.setAttribute('aria-expanded', 'false');
+            categoryMoves.forEach(move => {
+                move.style.display = 'none';
+            });
+        });
+    }
+    
+    /**
+     * Expand all categories
+     */
+    function expandAllCategories() {
+        const allCategories = document.querySelectorAll('.category-header.tree-node');
+        allCategories.forEach(headerElement => {
+            const triangle = headerElement.querySelector('.tree-triangle');
+            if (!triangle) return;
+            
+            // Find all moves in this category (next siblings until next header or end)
+            const categoryMoves = [];
+            let nextElement = headerElement.nextElementSibling;
+            
+            while (nextElement && !nextElement.classList.contains('category-header')) {
+                if (nextElement.classList.contains('move')) {
+                    categoryMoves.push(nextElement);
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            // Expand category
+            headerElement.classList.remove('collapsed');
+            triangle.textContent = "▼"; // Down arrow
+            headerElement.setAttribute('aria-expanded', 'true');
+            categoryMoves.forEach(move => {
+                move.style.display = '';
+            });
+        });
+    }
+    
+    /**
+     * Get current collapse state of all moves
+     * Returns a map of move titles to their collapse state
+     */
+    function getCurrentCollapseState() {
+        const collapseState = new Map();
+        const allMoves = document.querySelectorAll('.move');
+        
+        allMoves.forEach(moveDiv => {
+            const titleElement = moveDiv.querySelector('.move-title label, .move-title .move-title-text');
+            const contentContainer = moveDiv.querySelector('.move-content');
+            
+            if (titleElement && contentContainer) {
+                // Extract move title text
+                const moveTitle = titleElement.textContent || titleElement.innerText;
+                const isCollapsed = contentContainer.classList.contains('collapsed');
+                collapseState.set(moveTitle.trim(), isCollapsed);
+            }
+        });
+        
+        console.log('MovesCore: Stored collapse state for', collapseState.size, 'moves');
+        return collapseState;
+    }
+    
+    /**
+     * Restore collapse state for moves
+     * @param {Map} collapseState - Map of move titles to collapse state
+     */
+    function restoreCollapseState(collapseState) {
+        if (!collapseState || collapseState.size === 0) {
+            console.log('MovesCore: No collapse state to restore');
+            return;
+        }
+        
+        const allMoves = document.querySelectorAll('.move');
+        let restoredCount = 0;
+        
+        allMoves.forEach(moveDiv => {
+            const titleElement = moveDiv.querySelector('.move-title label, .move-title .move-title-text');
+            const contentContainer = moveDiv.querySelector('.move-content');
+            const toggleButton = moveDiv.querySelector('.move-collapse-toggle');
+            
+            if (titleElement && contentContainer && toggleButton) {
+                const moveTitle = (titleElement.textContent || titleElement.innerText).trim();
+                const shouldBeCollapsed = collapseState.get(moveTitle);
+                
+                if (shouldBeCollapsed !== undefined) {
+                    if (shouldBeCollapsed) {
+                        // Collapse this move - show plus sign
+                        contentContainer.classList.add('collapsed');
+                        toggleButton.classList.add('collapsed');
+                        toggleButton.innerHTML = '+'; // Plus (collapsed state)
+                        toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Collapse', 'Expand'));
+                        const titleEl = moveDiv.querySelector('.move-title');
+                        if (titleEl) titleEl.setAttribute('aria-expanded', 'false');
+                    } else {
+                        // Ensure this move is expanded - show minus sign
+                        contentContainer.classList.remove('collapsed');
+                        toggleButton.classList.remove('collapsed');
+                        toggleButton.innerHTML = '-' ; // Minus (expanded state)
+                        toggleButton.setAttribute('aria-label', toggleButton.getAttribute('aria-label').replace('Expand', 'Collapse'));
+                        const titleEl = moveDiv.querySelector('.move-title');
+                        if (titleEl) titleEl.setAttribute('aria-expanded', 'true');
+                    }
+                    restoredCount++;
+                }
+            }
+        });
+        
+        console.log('MovesCore: Restored collapse state for', restoredCount, 'moves');
+    }
+
+    /**
+     * Check if a move is "taken" based on URL parameters
+     * Note: This function needs access to the available map to check for default moves
+     * @param {Object} move - The move to check
+     * @param {URLSearchParams} urlParams - URL parameters
+     * @param {Object} available - Optional availability map to check for default moves
+     */
+    function isMoveTaken(move, urlParams, available = null) {
+        // Check if this is a default/free move (always available with data-no-persist="true")
+        // These moves should be considered "taken" even if not in URL
+        if (available && available[move.id] === true) {
+            return true;
+        }
+
+        // Check main move checkboxes
+        const moveCheckboxId = `move_${move.id}`;
+        if (urlParams.get(moveCheckboxId) === '1') {
+            return true;
+        }
+
+        // Check multiple move checkboxes if they exist
+        if (move.multiple) {
+            for (let i = 1; i <= move.multiple; i++) {
+                if (urlParams.get(`move_${move.id}_${i}`) === '1') {
+                    return true;
+                }
+            }
+        }
+
+        // Check pick option checkboxes if they exist (_p1, _p2, etc. and _p1_c2, _p1_c3, etc.)
+        if (move.pick && Array.isArray(move.pick)) {
+            const multiplePick = move.multiplePick || 1;
+            for (let i = 1; i <= move.pick.length; i++) {
+                // Check first column
+                if (urlParams.get(`move_${move.id}_p${i}`) === '1') {
+                    return true;
+                }
+                // Check additional columns if multiplePick > 1
+                for (let col = 2; col <= multiplePick; col++) {
+                    if (urlParams.get(`move_${move.id}_p${i}_c${col}`) === '1') {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        // Check pickOne option radio buttons if they exist (_o1, _o2, etc. and _o1_c2, _o1_c3, etc.)
+        if (move.pickOne && Array.isArray(move.pickOne)) {
+            const multiplePick = move.multiplePick || 1;
+            for (let i = 1; i <= move.pickOne.length; i++) {
+                // Check first column
+                if (urlParams.get(`move_${move.id}_o${i}`) === '1') {
+                    return true;
+                }
+                // Check additional columns if multiplePick > 1
+                for (let col = 2; col <= multiplePick; col++) {
+                    if (urlParams.get(`move_${move.id}_o${i}_c${col}`) === '1') {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Sort categories according to global configuration
+     * @param {Array<string>} categories - Array of category names to sort
+     * @returns {Array<string>} Sorted array of category names
+     */
+    function sortCategories(categories) {
+        // Get the global category order if available
+        const categoryOrder = window.categoriesConfig?.order || [];
+        
+        if (categoryOrder.length === 0) {
+            // No category order defined, fall back to alphabetical sorting
+            return categories.sort();
+        }
+        
+        // Create a map of category name to its position in the order
+        const orderMap = new Map();
+        categoryOrder.forEach((category, index) => {
+            orderMap.set(category, index);
+        });
+        
+        // Sort categories using the order map, with undefined positions at the end
+        return categories.sort((a, b) => {
+            const posA = orderMap.get(a);
+            const posB = orderMap.get(b);
+            
+            // If both are in the order list, sort by position
+            if (posA !== undefined && posB !== undefined) {
+                return posA - posB;
+            }
+            
+            // If only A is in the order list, A comes first
+            if (posA !== undefined && posB === undefined) {
+                return -1;
+            }
+            
+            // If only B is in the order list, B comes first
+            if (posA === undefined && posB !== undefined) {
+                return 1;
+            }
+            
+            // If neither is in the order list, sort alphabetically
+            return a.localeCompare(b);
+        });
+    }
+
+    /**
+     * Group moves by category
+     */
+    function groupMovesByCategory(moves, available, hideUntaken = false, urlParams = null) {
+        console.log('groupMovesByCategory called with:');
+        console.log('- Total moves:', moves.length);
+        console.log('- Available moves:', Object.keys(available));
+        console.log('- Looking for move "is":', moves.find(m => m.id === 'is'));
+        console.log('- "is" in available:', available.hasOwnProperty('is'), available['is']);
+        
+        const categorized = new Map(); // Map of category name to moves
+        const processedMoveIds = new Set(); // Track processed move IDs to prevent duplicates
+        
+        moves.forEach(move => {
+            if (available.hasOwnProperty(move.id)) {
+                // Skip if we've already processed this move ID
+                if (processedMoveIds.has(move.id)) {
+                    console.log(`Skipping duplicate move: ${move.id} (${move.title})`);
+                    return;
+                }
+                
+                // Skip untaken moves if hideUntaken is true
+                if (hideUntaken && urlParams && !isMoveTaken(move, urlParams, available)) {
+                    return;
+                }
+                
+                // All moves should have a category by now (normalized to "Moves" if empty)
+                const category = move.category || "Moves";
+                if (!categorized.has(category)) {
+                    categorized.set(category, []);
+                }
+                categorized.get(category).push(move);
+                processedMoveIds.add(move.id);
+            }
+        });
+        
+        return categorized;
+    }
+
+
+    /**
+     * Render all moves for roles with merged availability
+     */
+    function renderMovesForRole(roles, mergedAvailability) {
+        const movesContainer = document.getElementById("moves");
+        if (!movesContainer) return;
+        
+        movesContainer.innerHTML = "";
+        
+        if (!roles || roles.length === 0 || !mergedAvailability) {
+            return;
+        }
+        
+        const urlParams = new URLSearchParams(location.search);
+        
+        // Check if hiding untaken moves
+        const hideUntakenCheckbox = document.getElementById('hide_untaken');
+        const hideUntaken = hideUntakenCheckbox && hideUntakenCheckbox.checked;
+        
+        // Group moves by category using merged availability
+        const categorized = groupMovesByCategory(window.moves, mergedAvailability, hideUntaken, urlParams);
+        
+        // Role information header removed - no longer displaying roles
+        
+        // Sort categories according to configuration
+        const sortedCategories = sortCategories(Array.from(categorized.keys()));
+        
+        // Render categories in sorted order
+        sortedCategories.forEach(categoryName => {
+            const categoryMoves = categorized.get(categoryName);
+
+            // Sort moves by weight (stable sort - preserves original order for same weight)
+            // Default weight is 0 if not specified
+            const sortedMoves = categoryMoves.slice().sort((a, b) => {
+                const weightA = a.weight !== undefined ? a.weight : 0;
+                const weightB = b.weight !== undefined ? b.weight : 0;
+                return weightA - weightB;
+            });
+
+            const categoryHeader = createCategoryHeader(categoryName, sortedMoves.length);
+            movesContainer.appendChild(categoryHeader);
+
+            sortedMoves.forEach(move => {
+                const moveElement = renderMove(move, mergedAvailability, urlParams);
+                // Hide moves initially since categories start collapsed
+                moveElement.style.display = 'none';
+                movesContainer.appendChild(moveElement);
+            });
+        });
+    }
+
+    // Public API
+    return {
+        createMoveCheckboxes,
+        createMoveTitle,
+        createDescription,
+        createOutcome,
+        createSubmove,
+        createDetailsInput,
+        createPickOptions,
+        createPickOneOptions,
+        createCategoryHeader,
+        sortCategories,
+        groupMovesByCategory,
+        isMoveTaken,
+        renderMove,
+        renderMovesForRole,
+        toggleMoveCollapse,
+        toggleCategoryCollapse,
+        collapseAllMoves,
+        expandAllMoves,
+        collapseAllCategories,
+        expandAllCategories,
+        getCurrentCollapseState,
+        restoreCollapseState
+    };
+})();
