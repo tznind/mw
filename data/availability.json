@@ -11,7 +11,8 @@
       "Charm+1, Cool+2, Sharp-1, Tough-1, Weird+2"
     ],
     "c1": true,
-    "c2":true
+    "c2":true,
+    "ci":true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
