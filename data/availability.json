@@ -61,6 +61,10 @@
     "manipulate": true,
     "protect": true,
     "read-situation": true,
-    "magic":true
+    "magic": true,
+    "big-magic": true,
+    "harm-rules": true,
+    "recovery": true,
+    "end-of-session": true
   }
 }

@@ -327,5 +327,101 @@
             ]
         }
     ]
-}
+  },
+  {
+    "id": "big-magic",
+    "title": "Big Magic",
+    "hideCheckbox": true,
+    "description": "Use this when you want more than the Use Magic effects. Tell the Keeper what you want to do.\n\nThe Keeper may require:",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "",
+            "text": "If you meet the requirements, then the magic takes effect.",
+            "bullets": [
+                "You need to spend a lot of time (days or weeks) researching the magic ritual.",
+                "You need to experiment with the spell – there will be lots of failures before you get it right.",
+                "You need some rare and weird ingredients and supplies.",
+                "The spell will take a long time (hours or days) to cast.",
+                "You need a lot of people (2, 3, 7, 13, or more) to help.",
+                "The spell needs to be cast at a particular place and/or time.",
+                "You need to use magic as part of the ritual, perhaps to summon a monster, communicate with something, or bar the portal you opened.",
+                "It will have a specific side-effect or danger."
+            ]
+        }
+    ],
+    "details": true
+  },
+  {
+    "id": "harm-rules",
+    "title": "Harm",
+    "hideCheckbox": true,
+    "description": "Whenever you suffer harm, the Keeper will tell you what effect it has.\n\nInjury severity depends on how much harm you have suffered:",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "",
+            "text": "",
+            "bullets": [
+                "0-harm wounds have only minor, short term effects.",
+                "4-7 harm wounds are serious and unstable. They will get worse unless treated. Mark the \"Unstable\" box.",
+                "8-harm or more will kill a normal human, including a hunter."
+            ]
+        },
+        {
+            "range": "",
+            "text": "Armour reduces the harm suffered by the number of points it is rated for.\n\nMonsters may not be defeated until you use their weakness against them, and this applies to some minions as well."
+        }
+    ]
+  },
+  {
+    "id": "recovery",
+    "title": "Recovery",
+    "hideCheckbox": true,
+    "description": "Healing from wounds:",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "",
+            "text": "",
+            "bullets": [
+                "0 harm wounds are considered healed right away.",
+                "1-3 harm wounds improve when you receive first aid, and later when you rest. Heal 1 when you do.",
+                "Unstable wounds require first aid to become stable. While unstable, they may get worse.",
+                "4+ harm wounds require a healing move, time in an infirmary or hospital, or magical healing."
+            ]
+        },
+        {
+            "range": "",
+            "text": "At the end of the mystery, you also have a chance to heal:",
+            "bullets": [
+                "If there is no chance to rest, heal 1 harm.",
+                "If there is plenty of time, heal all harm."
+            ]
+        }
+    ]
+  },
+  {
+    "id": "end-of-session",
+    "title": "End of Session",
+    "hideCheckbox": true,
+    "description": "At the end of each session, the Keeper will ask the following questions:",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "",
+            "text": "",
+            "bullets": [
+                "Did we conclude the current mystery?",
+                "Did we save someone from certain death (or worse)?",
+                "Did we learn something new and important about the world?",
+                "Did we learn something new and important about one of the hunters?"
+            ]
+        },
+        {
+            "range": "",
+            "text": "If you get one or two \"Yes\" answers, mark one experience. If you get three or four, mark two."
+        }
+    ]
+  }
 ]
