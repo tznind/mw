@@ -2163,7 +2163,18 @@ form > div > .track-counter,
 body > .track-counter {
   position: static;
   margin: 8px 0;
-  justify-content: flex-start;
+  justify-content: center; /* Center-align tracks in main document */
+}
+
+/* Center-align track labels and shapes for main document tracks */
+form > div > .track-counter .track-label,
+form > .track-counter .track-label {
+  text-align: center;
+}
+
+form > div > .track-counter .individual-track,
+form > .track-counter .individual-track {
+  align-items: center; /* Center-align the label and shapes */
 }
 
 /* Grid layout for many tracks (>3) - using flex flow */

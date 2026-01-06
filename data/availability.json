@@ -3,7 +3,8 @@
     "_movesFile": "data/moves/the-chosen.json",
     "description": "Your birth was prophesied. You are the Chosen One, and with your abilities you can save the world. If you fail, all will be destroyed. It all rests on you. Only you.",
     "cards": [],
-    "c1": true
+    "c1": true,
+    "c2":true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
