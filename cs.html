@@ -61,8 +61,10 @@
       </div>
     </div>
 
-    <div id="stats-container"></div>
-
+    <div style="position: relative;">
+      <div id="stats-container"></div>
+      <button type="button" id="stats-help-button" class="help-icon" title="Show stat distributions" style="position: absolute; bottom: 8px; right: 8px;">?</button>
+    </div>
 
     <div id="luck"
       data-track
@@ -151,6 +153,9 @@ move tells you to, mark an experience box.</div>
 
 <!-- Main application -->
 <script src="main.js"></script>
+
+<!-- Stat lineup picker -->
+<script src="stat-lineup.js"></script>
 
 <!-- Language selector -->
 <script src="language-selector.js"></script>
