@@ -1,2 +1,11 @@
 [
+  {
+    "id": "e1",
+    "title": "Get a move from an unused playbook",
+    "description": "Mark this move when you take the respective Improvement.",
+    "multiple": 2,
+    "category": "Improvement",
+    "takeFrom": ["*"],
+    "takeCategory": ["Moves"]
+  }
 ]

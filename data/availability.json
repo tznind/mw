@@ -17,12 +17,13 @@
     "c5": false,
     "c6": false,
     "c7": false,
-    "ci": true
+    "ci": true,
+    "cai": true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
     "description": "Universal moves available to all characters.",
     "cards": [],
-    "universal": true
+    "e1": false
   }
 }

@@ -79,5 +79,22 @@
           "Take a move from another playbook (mark below)",
           "Take a move from another playbook (mark below)"
         ]
+    },
+    {
+      "id": "cai",
+      "title": "Advanced Improvements",
+      "category": "Improvement",
+      "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+      "pick": [
+          "Get +1 to any rating (Max +3)",
+          "Get back one used Luck point",
+          "Change this hunter to a new type",
+          "Create a second hunter to play as well as this one",
+          "Mark two of the basic moves as advanced",
+          "Mark another two of the basic moves as advanced",
+          "Retire this hunter to safety",
+          "Delete one of your Doom tags, and (optionally) one of your Heroic tags. You have changed that aspect of your destiny"
+        ],
+        "details": true
     }
 ]
