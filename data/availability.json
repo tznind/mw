@@ -60,6 +60,7 @@
     "investigate": true,
     "manipulate": true,
     "protect": true,
-    "read-situation": true
+    "read-situation": true,
+    "magic":true
   }
 }

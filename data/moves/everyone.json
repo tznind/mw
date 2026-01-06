@@ -275,5 +275,57 @@
             ]
         }
     ]
-  }
+  },
+  {
+    "id": "magic",
+    "title": "Use Magic (+Weird)",
+    "description": "When you use magic, say what you're trying to achieve and how you do the spell, then roll +Weird.",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "≥ 10",
+            "text": "The magic works without issues: choose your effect.",
+            "bullets": [
+                "Inflict harm (1-harm ignore-armour magic obvious).",
+                "Enchant a weapon. It gets +1 harm and +magic.",
+                "Do one thing that is beyond human limitations.",
+                "Bar a place or portal to a specific person or a type of creature.",
+                "Trap a specific person, minion, or monster.",
+                "Banish a spirit or curse from the person, object, or place it inhabits.",
+                "Summon a monster into the world.",
+                "Communicate with something that you do not share a language with.",
+                "Observe another place or time.",
+                "Heal 1-harm from an injury, or cure a disease, or neutralize a poison."
+            ]
+        },
+        {
+            "range": "7-9",
+            "text": "It works imperfectly: choose your effect and a glitch. The Keeper will decide what effect the glitch has",
+            "bullets": [
+                "The effect is weakened.",
+                "The effect is of short duration.",
+                "You take 1-harm ignore-armour.",
+                "The magic draws immediate, unwelcome attention.",
+                "It has a problematic side effect. The Keeper may say that...",
+                "The spell requires weird materials.",
+                "The spell will take 10 seconds, 30 seconds, or 1 minute to cast.",
+                "The spell requires ritual chanting and gestures.",
+                "The spell requires you to draw arcane symbols.",
+                "You need one or two people to help cast the spell.",
+                "You need to refer to a tome of magic for the details"
+            ]
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "The Keeper will offer you some added benefit."
+                }
+            ]
+        }
+    ]
+}
 ]
