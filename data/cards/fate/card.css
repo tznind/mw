@@ -1,0 +1,48 @@
+.fate-card {
+  /* Use default card styling */
+}
+
+.fate-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.fate-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fate-option input[type="checkbox"],
+.fate-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.fate-option label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Two-column layout for Heroic and Doom sections */
+.fate-tags-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.fate-heroic,
+.fate-doom {
+  flex: 1;
+  min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .fate-tags-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fate",
+  "title": "Your Fate",
+  "path": "data/cards/fate",
+  "description": "Track your character's destined fate with heroic and doom tags",
+  "version": "1.0.0",
+  "author": "System",
+  "files": {
+    "html": "card.html",
+    "css": "card.css"
+  }
+}
