@@ -65,12 +65,38 @@
     <div id="stats-container"></div>
     <hr>
 
-    <div id="loyalty_track"
+    <div id="luck"
       data-track
-      data-track-name="Loyalty"
-      data-track-max="3"
-      data-track-shape="circle"></div>
+      data-track-name="Luck"
+      data-track-max="7"
+      data-track-shape="square"
+      data-track-start-label="Okay"
+      data-track-end-label="Doomed"
+      ></div>
+      <div>Mark luck to change a roll to 12 or avoid all harm from an injury.</div>
 
+      
+    <div id="harm"
+      data-track
+      data-track-name="Harm"
+      data-track-max="7"
+      data-track-shape="square"
+      data-track-start-label="Okay"
+      data-track-end-label="Dying"
+      ></div>
+      <div>When you reach 4 or more, mark <input type="checkbox" id="unstable">Unstable</input>.</div>
+
+      
+
+      <div id="xp"
+      data-track
+      data-track-name="Experience"
+      data-track-max="5"
+      data-track-shape="square"
+      ></div>
+
+<div>Whenever you roll and get a total of 6 or less, or when a
+move tells you to, mark an experience box.</div>
 
     <!-- UI Control -->
     <div class="ui-control">
