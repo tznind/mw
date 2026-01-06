@@ -43,10 +43,20 @@
           <label for="name">Name:</label>
           <input type="text" id="name" name="name">
         </div>
-        
+
         <div class="form-field">
           <label for="player">Player:</label>
           <input type="text" id="player" name="player">
+        </div>
+
+        <div class="form-field">
+          <label for="pronouns">Pronouns:</label>
+          <input type="text" id="pronouns" name="pronouns">
+        </div>
+
+        <div class="form-field full-width">
+          <label for="look">Look:</label>
+          <input type="text" id="look" name="look" placeholder="Describe your character's appearance...">
         </div>
       </div>
       
@@ -89,7 +99,7 @@
       data-track-start-label="Okay"
       data-track-end-label="Doomed"
       ></div>
-      <div>Mark luck to change a roll to 12 or avoid all harm from an injury.</div>
+      <div id="luck-description">Mark luck to change a roll to 12 or avoid all harm from an injury.</div>
 
       
     <div id="harm"
@@ -173,6 +183,9 @@
 
 <!-- Language selector -->
 <script src="language-selector.js"></script>
+
+<!-- Luck special handler -->
+<script src="luck-special.js"></script>
 
 </body>
 </html>

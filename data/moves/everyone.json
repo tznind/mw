@@ -7,5 +7,45 @@
     "category": "Improvement",
     "takeFrom": ["*"],
     "takeCategory": ["Moves"]
+  },
+  {
+    "id": "kick",
+    "title": "Kick Some Ass",
+    "hideCheckbox": true,
+    "description": "When you get into a fight and kick some ass, roll +Tough.",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "7-9",
+            "text": "You and whatever you're fighting inflict harm on each other. The amount of harm is based on the established dangers in the game. That usually means you inflict the harm rating of your weapon and your enemy inflicts their attack's harm rating on you."
+        },
+        {
+            "range": "10+",
+            "text": "Choose one extra effect",
+            "bullets": [
+                "You gain the advantage: take +1 forward, or give +1 forward to another hunter.",
+                "You inflict terrible harm (+1 harm)",
+                "You suffer less harm (-1 harm)",
+                "You force them where you want them"
+            ]
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "Instead pick:",
+                    "bullets": [
+                        "You completely hold the advantage. All hunters involved in the fight get +1 forward.",
+                        "You suffer no harm at all.",
+                        "Your attack inflicts double the normal harm.",
+                        "Your attack drives the enemy away in a rout"
+                    ]
+                }
+            ]
+        }
+    ]
   }
 ]

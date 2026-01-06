@@ -3,6 +3,7 @@
     "_movesFile": "data/moves/the-chosen.json",
     "description": "Your birth was prophesied. You are the Chosen One, and with your abilities you can save the world. If you fail, all will be destroyed. It all rests on you. Only you.",
     "cards": ["fate", "special-weapon"],
+    "luckSpecial": "When you spend a point of Luck, the Keeper will bring your fate into play.",
     "statDistributions": [
       "Charm+2, Cool-1, Sharp+1, Tough+2, Weird-1",
       "Charm-1, Cool+2, Sharp+1, Tough+2, Weird-1",
@@ -20,10 +21,39 @@
     "ci": true,
     "cai": true
   },
+  "The Crooked":
+  {
+    "_movesFile": "data/moves/the-crooked.json",
+    "description": "Yeah, I've been around the block. A bit of this, a bit of that. When I came across the secret underworld of monsters and magic… well… it wasn't so different from the underworld I already knew. It was easy to find an angle, just like before.",
+    "luckSpecial":"Whenever you spend a Luck point, someone from your past will re-appear in your life. Soon.",
+    "statDistributions":[
+      "Charm +1, Cool +1, Sharp +2, Tough 0, Weird -1",
+      "Charm -1, Cool +1, Sharp +1, Tough +2, Weird 0",
+      "Charm -1, Cool +2, Sharp +2, Tough 0, Weird -1",
+      "Charm +2, Cool +1, Sharp +1, Tough 0, Weird -1",
+      "Charm +2, Cool 0, Sharp +1, Tough -1, Weird +1"
+    ],
+    "rb1": false,
+    "rb2": false,
+    "rb3": false,
+    "rb4": false,
+    "rb5": false,
+    "rb6": false,
+    "rb7": false,
+    "cr1": false,
+    "cr2": false,
+    "cr3": false,
+    "cr4": false,
+    "cr5": false,
+    "cr6": false,
+    "cr7": false,
+    "cr8": false
+  },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
     "description": "Universal moves available to all characters.",
     "cards": [],
-    "e1": false
+    "e1": false,
+    "kick":true
   }
 }

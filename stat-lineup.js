@@ -12,11 +12,22 @@
         const statIds = ['charm', 'cool', 'sharp', 'tough', 'weird'];
 
         parts.forEach(part => {
-            // Match pattern like "Charm+1" or "Cool-1"
-            const match = part.match(/^(\w+)([\+\-]\d+)$/);
+            // Match pattern like "Charm+1", "Cool-1", "Charm +1", "Tough 0", etc.
+            // Allows optional whitespace and optional +/- sign
+            const match = part.match(/^(\w+)\s*([\+\-]?\d+)$/);
             if (match) {
                 const statName = match[1].toLowerCase();
-                const value = match[2]; // Keep the +/- sign
+                let value = match[2];
+
+                // If no sign present and not zero, add + sign
+                if (!value.startsWith('+') && !value.startsWith('-') && value !== '0') {
+                    value = '+' + value;
+                }
+
+                // For zero values, represent as +0
+                if (value === '0') {
+                    value = '+0';
+                }
 
                 const input = document.getElementById(statName);
                 if (input) {
