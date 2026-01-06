@@ -2,26 +2,26 @@
   {
     "id": "charm",
     "title": "CHARM",
-    "shape": "hexagon"
+    "shape": "circle"
   },
   {
     "id": "cool",
     "title": "COOL",
-    "shape": "hexagon"
+    "shape": "circle"
   },
   {
     "id": "sharp",
     "title": "SHARP",
-    "shape": "hexagon"
+    "shape": "circle"
   },
   {
     "id": "tough",
     "title": "TOUGH",
-    "shape": "hexagon"
+    "shape": "circle"
   },
   {
     "id": "weird",
     "title": "WEIRD",
-    "shape": "square"
+    "shape": "circle"
   }
 ]
