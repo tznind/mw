@@ -2164,6 +2164,9 @@ body > .track-counter {
   position: static;
   margin: 8px 0;
   justify-content: center; /* Center-align tracks in main document */
+  transform: scale(1.5); /* Increase size by 50% */
+  transform-origin: center;
+  margin: 20px 0; /* Increase margin to account for larger size */
 }
 
 /* Center-align track labels and shapes for main document tracks */
