@@ -1,7 +1,7 @@
 [
   {
     "id": "c1",
-    "title": "Destiny's Plaything",
+    "title": "Destiny's Plaything (+Weird)",
     "description": "At the beginning of each mystery, roll +Weird to **see what is revealed about your immediate future**.",
     "outcomes": [
       {
@@ -26,7 +26,7 @@
     },
     {
       "id": "c3",
-      "title": "The Big Entrance",
+      "title": "The Big Entrance (+Cool)",
       "description": "When you make a showy entrance into a dangerous situation, roll +Cool.",
       "outcomes": [
         {

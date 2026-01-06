@@ -54,6 +54,12 @@
     "description": "Universal moves available to all characters.",
     "cards": [],
     "e1": false,
-    "kick":true
+    "kick": true,
+    "act-pressure": true,
+    "help-out": true,
+    "investigate": true,
+    "manipulate": true,
+    "protect": true,
+    "read-situation": true
   }
 }

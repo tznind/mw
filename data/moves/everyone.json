@@ -10,7 +10,7 @@
   },
   {
     "id": "kick",
-    "title": "Kick Some Ass",
+    "title": "Kick Some Ass (+Tough)",
     "hideCheckbox": true,
     "description": "When you get into a fight and kick some ass, roll +Tough.",
     "category": "Basic Moves",
@@ -43,6 +43,234 @@
                         "Your attack inflicts double the normal harm.",
                         "Your attack drives the enemy away in a rout"
                     ]
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "act-pressure",
+    "title": "Act Under Pressure (+Cool)",
+    "hideCheckbox": true,
+    "description": "When you act under pressure, roll +Cool.",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "≥ 10",
+            "text": "You do what you set out to."
+        },
+        {
+            "range": "7-9",
+            "text": "The Keeper is going to give you a worse outcome, hard choice, or price to pay."
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "You may choose to either do what you wanted and something extra, or to do what you wanted to absolute perfection."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "help-out",
+    "title": "Help Out (+Cool)",
+    "hideCheckbox": true,
+    "description": "When you help another hunter, roll +Cool.",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "≥ 10",
+            "text": "Your help grants them +1 to their roll."
+        },
+        {
+            "range": "7-9",
+            "text": "Your help grants them +1 to their roll, but you also expose yourself to trouble or danger."
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "Your help lets them act as if they just rolled a 12, regardless of what they actually got."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "investigate",
+    "title": "Investigate A Mystery (+Sharp)",
+    "hideCheckbox": true,
+    "description": "When you investigate a mystery, roll +Sharp.",
+    "category": "Basic Moves",
+    "tracks": [
+        {
+            "name": "Hold",
+            "max": 2,
+            "shape": "hexagon"
+        }
+    ],
+    "outcomes": [
+        {
+            "range": "≥ 10",
+            "text": "Hold 2. One hold can be spent to ask the Keeper one of the following questions:",
+            "bullets": [
+                "What happened here?",
+                "What sort of creature is it?",
+                "What can it do?",
+                "What can hurt it?",
+                "Where did it go?",
+                "What was it going to do?",
+                "What is being concealed here?"
+            ]
+        },
+        {
+            "range": "7-9",
+            "text": "Hold 1."
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "You may ask the Keeper any question you want about the mystery, not just the listed ones."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "manipulate",
+    "title": "Manipulate Someone (+Charm)",
+    "hideCheckbox": true,
+    "description": "Once you have given them a reason, tell them what you want them to do and roll +Charm.\n\nMonsters and minions cannot normally be manipulated.",
+    "category": "Basic Moves",
+    "submoves": [
+        {
+            "title": "Manipulate a Person",
+            "outcomes": [
+                {
+                    "range": "≥ 10",
+                    "text": "They'll do it for the reason you gave them. If you asked too much, they'll tell you the minimum it would take for them to do it (or if there's no way they'd do it)."
+                },
+                {
+                    "range": "7-9",
+                    "text": "They'll do it, but only if you do something for them right now to show that you mean it. If you asked too much, they'll tell you what, if anything, it would take for them to do it."
+                },
+                {
+                    "range": "Advanced 12+",
+                    "text": "Not only do they do what you want right now, they also become your **ally** for the rest of the mystery (or, if you do enough for them, permanently)."
+                }
+            ]
+        },
+        {
+            "title": "Manipulate a Hunter",
+            "outcomes": [
+                {
+                    "range": "≥ 10",
+                    "text": "If they do what you ask they mark experience and get +1 forward."
+                },
+                {
+                    "range": "7-9",
+                    "text": "They mark experience if they do what you ask."
+                },
+                {
+                    "range": "≤ 6",
+                    "text": "It's up to that hunter to decide how badly you offend or annoy them. They mark experience if they decide not to do what you asked."
+                },
+                {
+                    "range": "Advanced 12+",
+                    "text": "They must **Act under pressure** to resist your request. If they do what you ask, they mark one experience and take +1 ongoing while doing what you asked."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "protect",
+    "title": "Protect Someone (+Tough)",
+    "hideCheckbox": true,
+    "description": "When you prevent harm to another character, roll +Tough.",
+    "category": "Basic Moves",
+    "outcomes": [
+        {
+            "range": "≥ 7",
+            "text": "You protect them okay, but you'll suffer some or all of the harm they were going to get."
+        },
+        {
+            "range": "≥ 10",
+            "text": "Choose an extra:",
+            "bullets": [
+                "You suffer little harm (-1 harm)",
+                "All impending danger is now focused on you",
+                "You inflict harm on the enemy",
+                "You hold the enemy back"
+            ]
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "Both you and the character you are protecting are unharmed and out of danger. If you were protecting a bystander, they also become your ally."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "read-situation",
+    "title": "Read A Bad Situation (+Sharp)",
+    "hideCheckbox": true,
+    "description": "When you look around and read a bad situation, roll +Sharp.",
+    "category": "Basic Moves",
+        "tracks": [
+        {
+            "name": "Hold",
+            "max": 3,
+            "shape": "hexagon"
+        }
+    ],
+    "outcomes": [
+        {
+            "range": "≥ 10",
+            "text": "Hold 3. One hold can be spent to ask the Keeper one of the following questions:",
+            "bullets": [
+                "What's my best way in?",
+                "What's my best way out?",
+                "Are there any dangers we haven't noticed?",
+                "What's the biggest threat?",
+                "What's most vulnerable to me?",
+                "What's the best way to protect the victims?"
+            ]
+        },
+        {
+            "range": "7-9",
+            "text": "Hold 1."
+        },
+        {
+            "range": "",
+            "text": "If you act on the answers, you get +1 ongoing while the information is relevant."
+        }
+    ],
+    "submoves": [
+        {
+            "title": "Advanced",
+            "outcomes": [
+                {
+                    "range": "12+",
+                    "text": "You may ask the Keeper any question you want about the situation, not just the listed ones."
                 }
             ]
         }

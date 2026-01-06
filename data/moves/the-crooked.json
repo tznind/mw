@@ -8,7 +8,7 @@
   {
     "id": "rb2",
     "category": "Background",
-    "title": "Burglar",
+    "title": "Burglar (+Sharp)",
     "description": "When you break into a secure location, roll +Sharp.",
     "outcomes": [
       {
@@ -36,7 +36,7 @@
   {
     "id": "rb4",
     "category": "Background",
-    "title": "Fixer",
+    "title": "Fixer (+Charm)",
     "description": "If you need to buy something, sell something, or hire someone, roll +Charm.",
     "outcomes": [
       {
@@ -67,7 +67,7 @@
   {
     "id": "rb6",
     "category": "Background",
-    "title": "Charlatan",
+    "title": "Charlatan (+Cool)",
     "description": "When you want people to think you are using magic, roll +Cool. You may also manipulate people with fortune telling. When you do that, ask \"What are they hoping for right now?\" as a free question (even on a miss).",
     "outcomes": [
       {
@@ -83,7 +83,7 @@
   {
     "id": "rb7",
     "category": "Background",
-    "title": "Pickpocket",
+    "title": "Pickpocket (+Charm)",
     "description": "When you steal something small, roll +Charm.",
     "outcomes": [
       {
