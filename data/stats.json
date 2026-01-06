@@ -1,77 +1,27 @@
 [
   {
-    "id": "mettle",
-    "title": "METTLE",
-    "shape": "hexagon",
-    "tracks": [
-      {
-        "name": "Armor",
-        "max": 3,
-        "shape": "hexagon"
-      }
-    ]
-  },
-  {
-    "id": "physique",
-    "title": "PHYSIQUE",
-    "shape": "hexagon",
-    "tracks": [
-      {
-        "name": "Wounds",
-        "max": 6,
-        "shape": "circle",
-        "dynamic": true
-      }
-    ]
-  },
-  {
-    "id": "influence",
-    "title": "INFLUENCE",
+    "id": "charm",
+    "title": "CHARM",
     "shape": "hexagon"
   },
   {
-    "id": "expertise",
-    "title": "EXPERTISE",
-    "shape": "hexagon",
-    "tracks": [
-      {
-        "max": 4,
-        "shape": "circle"
-      }
-    ]
+    "id": "cool",
+    "title": "COOL",
+    "shape": "hexagon"
   },
   {
-    "id": "conviction",
-    "title": "CONVICTION",
+    "id": "sharp",
+    "title": "SHARP",
+    "shape": "hexagon"
+  },
+  {
+    "id": "tough",
+    "title": "TOUGH",
+    "shape": "hexagon"
+  },
+  {
+    "id": "weird",
+    "title": "WEIRD",
     "shape": "square"
-  },
-  {
-    "id": "armourhp",
-    "title": "Armour,Hp",
-    "shape": "double-up"
-  },
-  {
-    "id": "prophecy",
-    "title": "PROPHECY",
-    "shape": "clock",
-    "clock": {
-      "type": "twelfths",
-      "faces": 12,
-      "floatingInputs": [
-        {
-          "id": "blah",
-          "position": [30, 55],
-          "size": [70, 20]
-        }
-      ]
-    },
-    "tracks": [
-      {
-        "name": "Signs",
-        "max": 3,
-        "shape": "circle",
-        "endLabel": "doomed"
-      }
-    ]
   }
 ]
