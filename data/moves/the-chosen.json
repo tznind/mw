@@ -25,6 +25,45 @@
     "details": true
     },
     {
+      "id": "c3",
+      "title": "The Big Entrance",
+      "description": "When you make a showy entrance into a dangerous situation, roll +Cool.",
+      "outcomes": [
+        {
+          "range": "≥ 10",
+          "text": "Everyone stops to watch and listen until you finish your opening speech."
+        },
+        {
+          "range": "7-9",
+          "text": "You pick one person or monster to stop, watch and listen until you finish talking."
+        },
+        {
+          "range": "≤ 6",
+          "text": "You're marked as the biggest threat by all enemies who are present."
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "title": "Devastating",
+      "description": "When you inflict harm, you may inflict +1 harm."
+    },
+    {
+      "id": "c5",
+      "title": "Dutiful",
+      "description": "When your fate rears its ugly head, and you act in accordance with any of your fate tags (either heroic or doom) then mark experience. If it's a heroic tag, take +1 forward."
+    },
+    {
+      "id": "c6",
+      "title": "Invincible",
+      "description": "You always count as having 2-armour. This doesn't stack with other protection."
+    },
+    {
+      "id": "c7",
+      "title": "Resilience",
+      "description": "You heal faster than normal people. Any time your harm gets healed, heal an extra point. Additionally, your wounds count as 1-harm less for the purpose of the Keeper's harm moves."
+    },
+    {
       "id": "ci",
       "title": "Improvement",
       "category": "Improvement",
@@ -38,7 +77,7 @@
           "Take another Chosen Move",
           "Gain an ally",
           "Take a move from another playbook (mark below)",
-          "Take a move from another playbook (mark below)"       
+          "Take a move from another playbook (mark below)"
         ]
     }
 ]

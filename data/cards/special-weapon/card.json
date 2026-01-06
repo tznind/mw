@@ -1,0 +1,12 @@
+{
+  "id": "special-weapon",
+  "title": "Your Special Weapon",
+  "path": "data/cards/special-weapon",
+  "description": "Design your special weapon by choosing form, business-end options, and material",
+  "version": "1.0.0",
+  "author": "System",
+  "files": {
+    "html": "card.html",
+    "css": "card.css"
+  }
+}

@@ -1,0 +1,48 @@
+.special-weapon-card {
+  /* Use default card styling */
+}
+
+.weapon-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.weapon-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weapon-option input[type="checkbox"],
+.weapon-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.weapon-option label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Two-column layout for Form and Business-end sections */
+.weapon-parts-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.weapon-form,
+.weapon-business {
+  flex: 1;
+  min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .weapon-parts-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

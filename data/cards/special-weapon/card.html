@@ -1,0 +1,83 @@
+<div class="card special-weapon-card">
+  <h3>⚔ Your Special Weapon</h3>
+
+  <div class="card-section">
+    <p><em>Design your weapon by choosing a form and three business-end options (which are added to the base tags), and a material.</em></p>
+    <p><em>For example, if you want a magic sword you could choose: handle + blade + long + magic.</em></p>
+  </div>
+
+  <div class="weapon-parts-container">
+    <div class="card-section weapon-form">
+      <h4>Form (choose 1):</h4>
+      <div class="weapon-options">
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="radio" id="weapon_form_staff" name="weapon_form" value="staff">
+          <label for="weapon_form_staff">Staff (1-harm hand/close)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="radio" id="weapon_form_haft" name="weapon_form" value="haft">
+          <label for="weapon_form_haft">Haft (2-harm hand heavy)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="radio" id="weapon_form_handle" name="weapon_form" value="handle">
+          <label for="weapon_form_handle">Handle (1-harm hand balanced)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="radio" id="weapon_form_chain" name="weapon_form" value="chain">
+          <label for="weapon_form_chain">Chain (1-harm hand area)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section weapon-business">
+      <h4>Business-end (choose 3 options):</h4>
+      <div class="weapon-options">
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_artifact">
+          <label for="weapon_business_artifact">Artifact (add the "magic" tag)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_spikes">
+          <label for="weapon_business_spikes">Spikes (+1 harm, add the "messy" tag)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_blade">
+          <label for="weapon_business_blade">Blade (+1 harm)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_heavy">
+          <label for="weapon_business_heavy">Heavy (+1 harm)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_long">
+          <label for="weapon_business_long">Long (add the "close" tag)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_throwable">
+          <label for="weapon_business_throwable">Throwable (add the "close" tag)</label>
+        </div>
+
+        <div class="weapon-option" data-hide-if-untaken>
+          <input type="checkbox" id="weapon_business_chain">
+          <label for="weapon_business_chain">Chain (add the "area" tag)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-section">
+    <h4>Material:</h4>
+    <p><em>Pick what material the business-end is made from: add "steel," "cold iron," "silver," "wood," "stone," "bone," "teeth," "obsidian," or anything else you want.</em></p>
+    <div class="form-field">
+      <input type="text" id="weapon_material" name="weapon_material" placeholder="e.g., steel, cold iron, silver, obsidian...">
+    </div>
+  </div>
+</div>

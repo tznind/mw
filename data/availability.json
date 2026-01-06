@@ -2,7 +2,7 @@
   "The Chosen": {
     "_movesFile": "data/moves/the-chosen.json",
     "description": "Your birth was prophesied. You are the Chosen One, and with your abilities you can save the world. If you fail, all will be destroyed. It all rests on you. Only you.",
-    "cards": ["fate"],
+    "cards": ["fate", "special-weapon"],
     "statDistributions": [
       "Charm+2, Cool-1, Sharp+1, Tough+2, Weird-1",
       "Charm-1, Cool+2, Sharp+1, Tough+2, Weird-1",
@@ -11,8 +11,13 @@
       "Charm+1, Cool+2, Sharp-1, Tough-1, Weird+2"
     ],
     "c1": true,
-    "c2":true,
-    "ci":true
+    "c2": true,
+    "c3": false,
+    "c4": false,
+    "c5": false,
+    "c6": false,
+    "c7": false,
+    "ci": true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
