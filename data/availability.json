@@ -49,7 +49,10 @@
     "cr7": false,
     "cr8": false,
     "cri": true,
-    "crai": true
+    "crai": true,
+    "cr9": true,
+    "cr10":true,
+    "cr11":true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",

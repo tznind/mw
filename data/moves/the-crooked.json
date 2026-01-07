@@ -146,6 +146,52 @@
     "description": "You have a reputation from your criminal past. When you reveal who you are, your terrifying reputation counts as a reason for people to do what you ask, for the **Manipulate someone** move. Revealing your identity to someone can create other problems later, of course."
   },
   {
+    "id": "cr9",
+    "category": "Crooked",
+    "title": "🔥Heat",
+    "hideCheckbox": true,
+    "description": "You didn't get here without making enemies. Pick at least two of these and name the people involved:",
+    "pick": [
+      "A police detective, __cr9dn__, has made it a personal goal to put you away.",
+      "You have a rival from your background, __cr9rv__, who never misses a chance to screw you over.",
+      "You pissed off a well-connected criminal, __cr9cr__, and they'll do whatever they can to destroy you.",
+      "__cr9sp__ is someone with special powers, a person or monster, who you took advantage of.",
+      "__cr9op__ is an old partner you betrayed in the middle of a job."
+    ]
+  },
+  {
+    "id":"cr10",
+    "category": "Crooked",
+    "title":"Underworld",
+    "hideCheckbox": true,
+    "description": "Pick how you discovered about the real underworld.  Keep this in mind when you select moves, so that everything fits together.",
+    "pickOne": [
+        "The target of a job was a dangerous creature. Pick one: vampire, werewolf, troll, reptiloid.",
+        "You worked with someone who was more than they seemed. Pick one: sorcerer, demon, faerie, psychic.",
+        "You were hired by something weird. Pick one: immortal, god, outsider, witch.",
+        "Things went south on a job—including, but not limited to, running into (choose one): a horde of goblins, a hunger of ghouls, a dream-eater, a sala-mander."
+
+    ],
+    "details": true
+  },
+  {
+    "id": "cr11",
+    "category": "Crooked",
+    "title": "Gear",
+    "description": "Effective weapons, pick three:",
+    "pick": [
+      ".22 revolver (1-harm close reload small)",
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Shotgun (3-harm close messy)",
+      "Hunting rifle (2-harm far loud)",
+      "Big knife (1-harm hand)",
+      "Baseball bat (1-harm hand)",
+      "Submachinegun (2-harm close reload area)",
+      "Assault rifle (3-harm close/far area)"
+    ]
+  },
+  {
     "id": "cri",
     "title": "Improvement",
     "category": "Improvement",
