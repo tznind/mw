@@ -144,5 +144,39 @@
     "id": "cr8",
     "title": "Notorious",
     "description": "You have a reputation from your criminal past. When you reveal who you are, your terrifying reputation counts as a reason for people to do what you ask, for the **Manipulate someone** move. Revealing your identity to someone can create other problems later, of course."
+  },
+  {
+    "id": "cri",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "You get all of the basic moves, plus pick one **Background** move and two **Crooked** moves. When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Sharp (Max +3)",
+      "Get +1 Tough (Max +2)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Charm (Max +2)",
+      "Take another Crooked move",
+      "Take another Crooked move",
+      "Gain an ally: one of your old crew",
+      "Recover a stash of money from the old days, enough to live without care... for a year or two",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "crai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "Erase one used luck mark from your playbook"
+    ],
+    "details": true
   }
 ]
