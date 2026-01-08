@@ -262,6 +262,13 @@
     ],
     "sp1": false,
     "sp2": true,
+    "sp3": false,
+    "sp4": false,
+    "sp5": false,
+    "sp6": false,
+    "sp7": false,
+    "sp8": false,
+    "sp9": false,
     "spi": true,
     "spai": true,
     "spds": true
