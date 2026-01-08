@@ -33,13 +33,7 @@
       "Charm +2, Cool +1, Sharp +1, Tough 0, Weird -1",
       "Charm +2, Cool 0, Sharp +1, Tough -1, Weird +1"
     ],
-    "rb1": false,
-    "rb2": false,
-    "rb3": false,
-    "rb4": false,
-    "rb5": false,
-    "rb6": false,
-    "rb7": false,
+    "crx": true,
     "cr1": false,
     "cr2": false,
     "cr3": false,
@@ -222,5 +216,14 @@
     "harm-rules": true,
     "recovery": true,
     "end-of-session": true
+  },
+  "Background":{
+        "rb1": false,
+        "rb2": false,
+        "rb3": false,
+        "rb4": false,
+        "rb5": false,
+        "rb6": false,
+        "rb7": false
   }
 }

@@ -1,13 +1,11 @@
 [
   {
     "id": "rb1",
-    "category": "Background",
     "title": "Hoodlum",
     "description": "You can use Tough instead of Charm to **Manipulate someone** with threats of violence."
   },
   {
-    "id": "rb2",
-    "category": "Background",
+    "id": "rb2",    
     "title": "Burglar (+Sharp)",
     "description": "When you break into a secure location, roll +Sharp.",
     "outcomes": [
@@ -28,14 +26,12 @@
     ]
   },
   {
-    "id": "rb3",
-    "category": "Background",
+    "id": "rb3",    
     "title": "Grifter",
     "description": "When you are about to manipulate someone, you can ask the Keeper \"What will convince this person to do what I want?\" The Keeper must answer honestly, but not necessarily completely."
   },
   {
-    "id": "rb4",
-    "category": "Background",
+    "id": "rb4",    
     "title": "Fixer (+Charm)",
     "description": "If you need to buy something, sell something, or hire someone, roll +Charm.",
     "outcomes": [
@@ -59,14 +55,12 @@
     ]
   },
   {
-    "id": "rb5",
-    "category": "Background",
+    "id": "rb5",    
     "title": "Assassin",
     "description": "When you take your first shot at an unsuspecting target, do +2 Harm."
   },
   {
-    "id": "rb6",
-    "category": "Background",
+    "id": "rb6",    
     "title": "Charlatan (+Cool)",
     "description": "When you want people to think you are using magic, roll +Cool. You may also manipulate people with fortune telling. When you do that, ask \"What are they hoping for right now?\" as a free question (even on a miss).",
     "outcomes": [
@@ -82,7 +76,6 @@
   },
   {
     "id": "rb7",
-    "category": "Background",
     "title": "Pickpocket (+Charm)",
     "description": "When you steal something small, roll +Charm.",
     "outcomes": [
@@ -147,9 +140,9 @@
   },
   {
     "id": "cr9",
-    "category": "Crooked",
     "title": "🔥Heat",
     "hideCheckbox": true,
+    "weight": -1,
     "description": "You didn't get here without making enemies. Pick at least two of these and name the people involved:",
     "pick": [
       "A police detective, __cr9dn__, has made it a personal goal to put you away.",
@@ -161,7 +154,7 @@
   },
   {
     "id":"cr10",
-    "category": "Crooked",
+    "weight": -1,    
     "title":"Underworld",
     "hideCheckbox": true,
     "description": "Pick how you discovered about the real underworld.  Keep this in mind when you select moves, so that everything fits together.",
@@ -175,10 +168,16 @@
     "details": true
   },
   {
+    "id": "crx",
+    "title": "Background",
+    "takeFrom": ["Background"],
+    "weight": -1
+  },
+  {
     "id": "cr11",
-    "category": "Crooked",
     "title": "Gear",
     "description": "Effective weapons, pick three:",
+    "weight": -1,
     "pick": [
       ".22 revolver (1-harm close reload small)",
       ".38 revolver (2-harm close reload loud)",
