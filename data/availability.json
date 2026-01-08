@@ -127,10 +127,21 @@
       "Charm+1, Cool-1, Sharp+1, Tough 0, Weird+2",
       "Charm 0, Cool 0, Sharp 0, Tough+1, Weird+2"
     ],
-    "i1": false,
+    "i1": true,
     "i2": true,
     "i3": true,
     "i4": true,
+    "i5": false,
+    "i6": false,
+    "i7": false,
+    "i8": false,
+    "i9": false,
+    "i10": false,
+    "i11": false,
+    "i12": false,
+    "i13": true,
+    "i14": true,
+    "i15": true,
     "ii": true,
     "iai": true
   },
@@ -146,6 +157,8 @@
     ],
     "m1": false,
     "m2": true,
+    "cn": true,
+    "mb":true,
     "mi": true,
     "mai": true
   },
@@ -256,5 +269,11 @@
         "rb5": false,
         "rb6": false,
         "rb7": false
+  },
+  "Curses":{
+    "cur1":false,
+    "cur2":false,
+    "cur3":false,
+    "cur4":false
   }
 }

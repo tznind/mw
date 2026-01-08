@@ -5,6 +5,62 @@
     "description": "This is a placeholder move for The Monstrous playbook."
   },
   {
+    "id":"mb",
+    "title": "🧟 Monster Breed",
+    "hideCheckbox": true,
+    "weight": -3,
+    "description": "You’re half-human, half-monster: decide if you were always this way or if you you were originally human and transformed somehow.\n\nNow decide if you were always fighting to be good, or if you were evil and changed sides.\n\nDefine your monstrous breed by picking a curse, moves, and natural attacks.\n\n Create the monster you want to be: whatever you choose defines your breed in the game.",
+    "takeFrom": [
+      "Curses"
+    ]
+  },
+  {
+    "id":"cur1",
+    "title": "Feed",
+    "hideCheckbox": true,
+    "description": "You must subsist on living humans—it might take the form of blood, brains, or spiritual essence but it must be from people. You need to **act under pressure** to resist feeding whenever a perfect  opportunity presents itself.",
+    "details": true
+  },
+  {
+    "id":"cur2",
+    "title": "Vulnerability",
+    "hideCheckbox": true,
+    "description": " Pick a substance. You suffer +1 harm when you suffer harm from it. If you are bound or surrounded by it, you must **act under pressure** to use your powers",
+    "details": true
+  },
+  {
+    "id":"cur3",
+    "title": "Pure Drive",
+    "hideCheckbox": true,
+    "description": "One emotion rules you.  Whenever you have a chance to indulge that emotion, you must do so  immediately, or **act under pressure** to resist.",
+    "pickOne": [
+      "hunger", "hate", "anger","fear","jealousy", "greed", "joy", "pride","envy", "lust", "cruelty"
+    ]
+  },
+  {
+    "id":"cur4",
+    "title": "Dark Master",
+    "hideCheckbox": true,
+    "description": "You have an evil lord who doesn’t know you changed sides. They still give you orders, and they do not tolerate refusal. Or failure.",
+    "details": true
+  },
+  {
+    "id": "cn",
+    "title":"🐾 Natural Attacks",
+    "description": "Pick a Base and add an extra to it, or two Bases",
+    "weight": -2,
+    "hideCheckbox": true,
+    "pick": [
+        "Base: teeth (3-harm intimate)",
+        "Base: claws (2-harm hand)",
+        "Base: magical force (1-harm magical close)",
+        "Base: life-drain (1-harm intimate life-drain)",
+        "Extra: Add +1 harm to a base",
+        "Extra: Add ignore-armour to a base",
+        "Extra: Add an extra range to a base __range:intimate, hand, or close__."
+    ]
+  },
+  {
     "id": "m2",
     "title": "Gear",
     "description": "If you want, you can take one handy weapon:",
