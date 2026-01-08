@@ -7,7 +7,7 @@
   {
     "id": "mu2",
     "title": "Mundane Weapons",
-    "description": "Mundane weapons (pick two):",
+    "description": "You get two mundane weapons.",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [
@@ -22,7 +22,7 @@
   {
     "id": "mu3",
     "title": "Means of Transport",
-    "description": "Means of transport (pick one):",
+    "description": "You get one means of transport.",
     "weight": -1,
     "hideCheckbox": true,
     "pickOne": [

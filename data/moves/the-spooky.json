@@ -7,7 +7,7 @@
   {
     "id": "sp2",
     "title": "Gear",
-    "description": "You get two normal weapons and any magical items or amulets that you use to invoke your powers.\n\nNormal weapons (pick two):",
+    "description": "You get two normal weapons and any magical items or amulets that you use to invoke your powers.",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [

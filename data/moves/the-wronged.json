@@ -15,7 +15,7 @@
   {
     "id": "w3",
     "title": "Signature Weapons",
-    "description": "Signature Weapons, pick one:",
+    "description": "Pick one signature weapon.",
     "weight": -1,
     "hideCheckbox": true,
     "pickOne": [
@@ -31,7 +31,7 @@
   {
     "id": "w4",
     "title": "Practical Weapons",
-    "description": "Practical weapons, pick two:",
+    "description": "Pick two practical weapons.",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [

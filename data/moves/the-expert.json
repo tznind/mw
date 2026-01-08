@@ -158,7 +158,7 @@
   {
     "id": "ex2",
     "title": "Gear",
-    "description": "You get three monster-slaying weapons.\n\nMonster-slaying weapons (pick three):",
+    "description": "You get three monster-slaying weapons:",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [

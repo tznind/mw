@@ -95,9 +95,9 @@
   {
     "id": "dg",
     "title": "Gear",
-    "category": "The Divine",
     "description": "Pick one divine weapon:",
     "hideCheckbox": true,
+    "weight": -1,
     "pickOne": [
       "Flaming sword (3-harm hand fire holy)",
       "Thunder hammer (3-harm hand stun holy)",
@@ -115,8 +115,8 @@
   {
     "id": "dm",
     "title": "Mission",
-    "category": "The Divine",
     "hideCheckbox": true,
+    "weight": -1,
     "description": "You have been put on Earth for a purpose. Pick one:",
     "pickOne": [      
       "You are here to fight the schemes of an Adversary.",

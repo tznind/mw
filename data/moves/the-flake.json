@@ -1,13 +1,100 @@
 [
   {
     "id": "f1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Flake playbook."
+    "title": "Connect the Dots (+Sharp)",
+    "description": "At the beginning of each mystery, if you look for the wider patterns that current events might be part of, roll +Sharp.",
+    "tracks": [
+      {
+        "name": "Hold",
+        "max": 3,
+        "shape": "square"
+      }
+    ],
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Hold 3. Spend your hold during the mystery to ask the Keeper any one of the following questions:",
+        "bullets": [
+          "Is this person connected to current events more than they are saying?",
+          "When and where will the next critical event occur?",
+          "What does the monster want from this person?",
+          "Is this connected to previous mysteries we have investigated?",
+          "How does this mystery connect to the bigger picture?"
+        ]
+      },
+      {
+        "range": "7-9",
+        "text": "Hold 1."
+      }
+    ]
+  },
+  {
+    "id": "f4",
+    "title": "Crazy Eyes",
+    "description": "You get +1 Weird (max +3)."
+  },
+  {
+    "id": "f5",
+    "title": "See, It All Fits Together",
+    "description": "You can use Sharp instead of Charm when you **manipulate someone**."
+  },
+  {
+    "id": "f6",
+    "title": "Suspicious Mind",
+    "description": "If someone lies to you, you know it."
+  },
+  {
+    "id": "f7",
+    "title": "Often Overlooked (+Weird)",
+    "description": "When you act all crazy to avoid something, roll +Weird.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You're regarded as unthreatening and unimportant."
+      },
+      {
+        "range": "7-9",
+        "text": "Pick one: unthreatening or unimportant."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You draw lots (but not all) of the attention."
+      }
+    ]
+  },
+  {
+    "id": "f8",
+    "title": "Contrary",
+    "description": "When you seek out and receive someone's honest advice on the best course of action for you and then do something else instead, mark experience. If you do exactly the opposite of their advice, you also take +1 ongoing on any moves you make pursuing that course."
+  },
+  {
+    "id": "f9",
+    "title": "Net Friends (+Charm)",
+    "description": "You know a lot of people on the Internet. When you contact a net friend to help you with a mystery, roll +Charm.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "They're available and helpful—they can fix something, break a code, hack a computer, or get you some special information."
+      },
+      {
+        "range": "7-9",
+        "text": "They're prepared to help, but it's either going to take some time or you're going to have to do part of it yourself."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You burn some bridges."
+      }
+    ]
+  },
+  {
+    "id": "f10",
+    "title": "Sneaky",
+    "description": "When you attack from ambush, or from behind, inflict +2 harm."
   },
   {
     "id": "f2",
     "title": "Gear - Normal Weapons",
-    "description": "You get one normal weapon.\n\nNormal weapons (pick one):",
+    "description": "You get one normal weapon.",
     "weight": -1,
     "hideCheckbox": true,
     "pickOne": [
@@ -22,7 +109,7 @@
   {
     "id": "f3",
     "title": "Gear - Hidden Weapons",
-    "description": "You get two hidden weapons.\n\nHidden weapons (pick two):",
+    "description": "You get two hidden weapons.",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [

@@ -7,7 +7,7 @@
   {
     "id": "p2",
     "title": "Gear - Armour",
-    "description": "You get either a flak vest (1-armour hidden) or combat armour (2-armour heavy) for protection.\n\n(pick one):",
+    "description": "You get either a flak vest (1-armour hidden) or combat armour (2-armour heavy) for protection.",
     "weight": -1,
     "hideCheckbox": true,
     "pickOne": [
@@ -18,7 +18,7 @@
   {
     "id": "p3",
     "title": "Gear - Serious Weapons",
-    "description": "Gear - Serious weapons (pick one):",
+    "description": "You get one serious weapon.",
     "weight": -1,
     "hideCheckbox": true,
     "pickOne": [
@@ -32,7 +32,7 @@
   {
     "id": "p4",
     "title": "Gear - Normal Weapons",
-    "description": "Gear - Normal weapons (pick two):",
+    "description": "You get two normal weapons.",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [
