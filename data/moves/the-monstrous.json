@@ -1,8 +1,96 @@
 [
   {
     "id": "m1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Monstrous playbook."
+    "title": "Immortal",
+    "description": "You do not age or sicken, and whenever you suffer harm you suffer 1-harm less."
+  },
+  {
+    "id": "m3",
+    "title": "Unnatural Appeal",
+    "description": "Roll +Weird instead of +Charm when you **manipulate someone**."
+  },
+  {
+    "id": "m4",
+    "title": "Unholy Strength",
+    "description": "Roll +Weird instead of +Tough when you **kick some ass**."
+  },
+  {
+    "id": "m5",
+    "title": "Incorporeal",
+    "description": "You may move freely through solid objects (but not people)."
+  },
+  {
+    "id": "m6",
+    "title": "Preternatural Speed",
+    "description": "You go much faster than normal people. When you chase, flee, or run take +1 ongoing."
+  },
+  {
+    "id": "m7",
+    "title": "Claws of the Beast",
+    "description": "All your natural attacks get +1 harm."
+  },
+  {
+    "id": "m8",
+    "title": "Mental Dominion (+Charm)",
+    "description": "When you gaze into a normal human's eyes and exert your will over them, roll +Charm.",
+    "tracks": [
+      {
+        "name": "Hold",
+        "max": 3,
+        "shape": "square"
+      }
+    ],
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Hold 3. You may spend your hold to give them an order. Regular people will follow your order, whatever it is. Hunters can choose whether they do it or not. If they do, they mark experience."
+      },
+      {
+        "range": "7-9",
+        "text": "Hold 1."
+      }
+    ]
+  },
+  {
+    "id": "m9",
+    "title": "Unquenchable Vitality (+Cool)",
+    "description": "When you have taken harm, you can heal yourself. Roll +Cool.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Heal 2-harm and stabilise your injuries."
+      },
+      {
+        "range": "7-9",
+        "text": "Heal 1-harm and stabilise your injuries."
+      },
+      {
+        "range": "≤ 6",
+        "text": "Your injuries worsen."
+      }
+    ]
+  },
+  {
+    "id": "m10",
+    "title": "Dark Negotiator",
+    "description": "You can use the **manipulate someone** move on monsters as well as people, if they can reason and talk."
+  },
+  {
+    "id": "m11",
+    "title": "Flight",
+    "description": "You can fly."
+  },
+  {
+    "id": "m12",
+    "title": "Shapeshifter",
+    "description": "You may change your form (usually into an animal). Decide if you have just one alternate form or several, and detail them. You gain +1 to **investigate a mystery** when using an alternate form's superior senses (e.g. smell for a wolf, sight for an eagle).",
+    "details": true
+  },
+  {
+    "id": "m13",
+    "title": "Something Borrowed",
+    "description": "Take a move from a hunter playbook that is not currently in play.",
+    "takeFrom": ["*"]
   },
   {
     "id":"mb",
@@ -12,7 +100,14 @@
     "description": "You’re half-human, half-monster: decide if you were always this way or if you you were originally human and transformed somehow.\n\nNow decide if you were always fighting to be good, or if you were evil and changed sides.\n\nDefine your monstrous breed by picking a curse, moves, and natural attacks.\n\n Create the monster you want to be: whatever you choose defines your breed in the game.",
     "takeFrom": [
       "Curses"
+    ],
+    "submoves": [
+      {
+        "title": "Starting Moves",
+        "description": "Choose two Monstrous Moves"
+      }
     ]
+
   },
   {
     "id":"cur1",
