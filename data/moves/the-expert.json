@@ -1,8 +1,159 @@
 [
   {
+    "id": "ex9",
+    "title": "🏠Haven",
+    "weight": -1,
+    "hideCheckbox": true,
+    "description": "You have set up a haven, a safe place to work. Pick three of the options below for your haven:",
+    "pick": [
+      "**Lore Library.** When you hit the books, take +1 forward to investigate the mystery (as long as historical or reference works are appropriate).",
+      "**Mystical Library.** If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for use magic.",
+      "**Protection Spells.** Your haven is safe from monsters—they cannot enter. Monsters might be able to do something special to evade the wards, but not easily.",
+      "**Armory.** You have a stockpile of mystical and rare monster-killing weapons and items (see move below).",
+      "**Infirmary.** You can heal people, and have the space for one or two to recuperate. The Keeper will tell you how long any patient's recovery is likely to take, and if you need extra supplies or help.",
+      "**Workshop.** You have a space for building and repairing guns, cars and other gadgets. Work out with the Keeper how long any repair or construction will take, and if you need extra supplies or help.",
+      "**Oubliette.** This room is isolated from every kind of monster, spirit and magic that you know about. Anything you stash in there can't be found, can't do any magic, and can't get out.",
+      "**Panic Room.** This has essential supplies and is protected by normal and mystical means. You can hide out there for a few days, safe from pretty much anything.",
+      "**Magical Laboratory.** You have a mystical lab with all kinds of weird ingredients and tools useful for casting spells (like the use magic move, big magic, and any other magical moves)."
+    ],
+    "submoves": [
+      {
+        "title": "Armory (+Weird)",
+        "description": "If you need a special weapon, roll +Weird.",
+        "outcomes": [
+          {
+            "range": "≥ 10",
+            "text": "you have it (and plenty if that matters)"
+          },
+          {
+            "range": "7-9",
+            "text": "you have it, but only the minimum"
+          },
+          {
+            "range": "≤ 6",
+            "text": "you've got the wrong thing."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ex1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Expert playbook."
+    "title": "I've Read About This Sort Of Thing",
+    "description": "Roll +Sharp instead of +Cool when you **act under pressure**."
+  },
+  {
+    "id": "ex3",
+    "title": "Often Right",
+    "description": "When a hunter comes to you for advice about a problem, give them your honest opinion and advice. If they take your advice, they get +1 ongoing while following your advice, and you mark experience."
+  },
+  {
+    "id": "ex4",
+    "title": "Preparedness (+Sharp)",
+    "description": "When you need something unusual or rare, roll +Sharp.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You have it here right now."
+      },
+      {
+        "range": "7-9",
+        "text": "You have it, but not here: it will take some time to get it."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You know where it is, but it's somewhere real bad."
+      }
+    ]
+  },
+  {
+    "id": "ex5",
+    "title": "It Wasn't As Bad As It Looked (+Cool)",
+    "description": "Once per mystery, you may attempt to keep going despite your injuries. Roll +Cool.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Heal 2 harm and stabilize your wounds."
+      },
+      {
+        "range": "7-9",
+        "text": "You may either stabilize or heal 1 harm."
+      },
+      {
+        "range": "≤ 6",
+        "text": "It was worse than it looked: the Keeper may inflict a harm move on you, or make your wounds unstable."
+      }
+    ]
+  },
+  {
+    "id": "ex6",
+    "title": "Precise Strike (+Tough)",
+    "description": "When you inflict harm on a monster, you can aim for a weak spot. Roll +Tough.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You inflict +2 harm."
+      },
+      {
+        "range": "7-9",
+        "text": "You inflict +1 harm."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You leave yourself open to the monster."
+      }
+    ]
+  },
+  {
+    "id": "ex7",
+    "title": "The Woman (or Man) With The Plan (+Sharp)",
+    "description": "At the beginning of each mystery, roll +Sharp.",
+    "tracks": [
+      {
+        "name": "Hold",
+        "max": 2,
+        "shape": "square"
+      }
+    ],
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Hold 2. Spend the hold to be where you need to be, prepared and ready."
+      },
+      {
+        "range": "7-9",
+        "text": "Hold 1."
+      },
+      {
+        "range": "≤ 6",
+        "text": "The Keeper holds 1 they can spend to put you in the worst place, unprepared and unready."
+      }
+    ]
+  },
+  {
+    "id": "ex8",
+    "title": "Dark Past (+Weird)",
+    "description": "If you trawl through your memories for something relevant to the case at hand, roll +Weird.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Ask the Keeper two questions:",
+        "bullets": [
+          "When I dealt with this creature (or one of its kind), what did I learn?",
+          "What black magic do I know that could help here?",
+          "Do I know anyone who might be behind this?",
+          "Who do I know who can help us right now?"
+        ]
+      },
+      {
+        "range": "7-9",
+        "text": "Ask one."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You can ask a question anyway but that will mean you were personally complicit in creating the situation you are now dealing with."
+      }
+    ]
   },
   {
     "id": "ex2",

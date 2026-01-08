@@ -84,6 +84,13 @@
     "luckSpecial":"When you spend a point of Luck, you discover something happening now is related to something you were involved in years ago.",
     "ex1": false,
     "ex2": true,
+    "ex3": false,
+    "ex4": false,
+    "ex5": false,
+    "ex6": false,
+    "ex7": false,
+    "ex8": false,
+    "ex9": true,
     "exi": true,
     "exai": true
   },
