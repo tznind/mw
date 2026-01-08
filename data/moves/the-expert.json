@@ -5,6 +5,24 @@
     "description": "This is a placeholder move for The Expert playbook."
   },
   {
+    "id": "ex2",
+    "title": "Gear",
+    "description": "You get three monster-slaying weapons.\n\nMonster-slaying weapons (pick three):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Mallet & wooden stakes (3-harm intimate slow wooden)",
+      "Silver sword (2-harm hand messy silver)",
+      "Cold iron sword (2-harm hand messy iron)",
+      "Blessed knife (2-harm hand holy)",
+      "Magical dagger (2-harm hand magic)",
+      "Juju bag (1-harm far magic)",
+      "Flamethrower (3-harm close fire heavy volatile)",
+      "Magnum (3-harm close reload loud)",
+      "Shotgun (3-harm close messy loud)"
+    ]
+  },
+  {
     "id": "exi",
     "title": "Improvement",
     "category": "Improvement",

@@ -5,6 +5,46 @@
     "description": "This is a placeholder move for The Wronged playbook."
   },
   {
+    "id": "w2",
+    "title": "Gear",
+    "description": "Pick one signature weapon and two practical weapons.\n\nYou have protective wear, suited to your look, worth 1-armour.\n\nIf you want, you may take a classic car, classic motorcycle, plain pickup, or plain van.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "details": true
+  },
+  {
+    "id": "w3",
+    "title": "Signature Weapons",
+    "description": "Signature Weapons, pick one:",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Sawn-off shotgun (3-harm hand/close messy loud reload)",
+      "Hand cannon (3-harm close loud)",
+      "Fighting knife (2-harm hand quiet)",
+      "Huge sword or huge axe (3-harm hand messy heavy)",
+      "Specialist weapons for destroying your foes (e.g. wooden stakes and mallet for vampires, silver dagger for werewolves, etc.). 4-harm against the specific creatures it targets, 1-harm otherwise, and other tags by agreement with the Keeper.",
+      "Enchanted dagger (2-harm hand magic)",
+      "Chainsaw (3-harm hand messy unreliable loud heavy)"
+    ]
+  },
+  {
+    "id": "w4",
+    "title": "Practical Weapons",
+    "description": "Practical weapons, pick two:",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Shotgun (3-harm close messy loud)",
+      "Big knife (1-harm hand)",
+      "Brass knuckles (1-harm hand stealthy)",
+      "Assault rifle (3-harm close area loud reload)"
+    ]
+  },
+  {
     "id": "wi",
     "title": "Improvement",
     "category": "Improvement",

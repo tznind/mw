@@ -5,6 +5,23 @@
     "description": "This is a placeholder move for The Monstrous playbook."
   },
   {
+    "id": "m2",
+    "title": "Gear",
+    "description": "If you want, you can take one handy weapon:",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Magnum (3-harm close reload loud)",
+      "Shotgun (3-harm close messy)",
+      "Big knife (1-harm hand)",
+      "Brass knuckles (1-harm hand quiet small)",
+      "Sword (2-harm hand messy)",
+      "Huge sword (3-harm hand heavy)"
+    ]
+  },
+  {
     "id": "mi",
     "title": "Improvement",
     "category": "Improvement",

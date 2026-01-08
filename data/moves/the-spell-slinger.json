@@ -5,6 +5,18 @@
     "description": "This is a placeholder move for The Spell-Slinger playbook."
   },
   {
+    "id": "ss2",
+    "title": "Gear",
+    "description": "You don't need much—aside from any foci or consumables to power your magic. Still, it's good to carry some backup. Pick one:",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Old revolver (2-harm close reload loud)",
+      "Ritual knife (1-harm hand)",
+      "Heirloom sword (2-harm hand messy)"
+    ]
+  },
+  {
     "id": "ssi",
     "title": "Improvement",
     "category": "Improvement",

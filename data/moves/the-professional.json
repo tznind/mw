@@ -5,6 +5,45 @@
     "description": "This is a placeholder move for The Professional playbook."
   },
   {
+    "id": "p2",
+    "title": "Gear - Armour",
+    "description": "You get either a flak vest (1-armour hidden) or combat armour (2-armour heavy) for protection.\n\n(pick one):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Flak vest (1-armour hidden)",
+      "Combat armour (2-armour heavy)"
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "Gear - Serious Weapons",
+    "description": "Gear - Serious weapons (pick one):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Assault rifle (3-harm far area loud reload)",
+      "Grenade launcher (4-harm far area messy loud reload)",
+      "Sniper rifle (4-harm far)",
+      "Grenades (4-harm close area messy loud)",
+      "Submachine gun (3-harm close area loud reload)"
+    ]
+  },
+  {
+    "id": "p4",
+    "title": "Gear - Normal Weapons",
+    "description": "Gear - Normal weapons (pick two):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Shotgun (3-harm close messy)",
+      "Big knife (1-harm hand)"
+    ]
+  },
+  {
     "id": "pi",
     "title": "Improvement",
     "category": "Improvement",

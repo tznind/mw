@@ -5,6 +5,20 @@
     "description": "This is a placeholder move for The Spooky playbook."
   },
   {
+    "id": "sp2",
+    "title": "Gear",
+    "description": "You get two normal weapons and any magical items or amulets that you use to invoke your powers.\n\nNormal weapons (pick two):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Shotgun (3-harm close messy)",
+      "Big knife (1-harm hand)"
+    ]
+  },
+  {
     "id": "spi",
     "title": "Improvement",
     "category": "Improvement",

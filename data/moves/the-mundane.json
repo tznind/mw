@@ -5,6 +5,36 @@
     "description": "This is a placeholder move for The Mundane playbook."
   },
   {
+    "id": "mu2",
+    "title": "Mundane Weapons",
+    "description": "Mundane weapons (pick two):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Golf club, baseball bat, cricket bat, or hockey stick (2-harm hand innocuous messy)",
+      "Pocket knife or multitool (1-harm hand useful small)",
+      "Small handgun (2-harm close loud reload)",
+      "Hunting rifle (3-harm far loud reload)",
+      "Sledge-hammer or fire axe (3-harm hand messy)",
+      "Nunchuks (2-harm hand area)"
+    ]
+  },
+  {
+    "id": "mu3",
+    "title": "Means of Transport",
+    "description": "Means of transport (pick one):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Skateboard",
+      "Bicycle",
+      "Fairly new car in decent condition",
+      "Classic car in terrible condition",
+      "Motorcycle",
+      "Van"
+    ]
+  },
+  {
     "id": "mui",
     "title": "Improvement",
     "category": "Improvement",

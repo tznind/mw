@@ -5,6 +5,36 @@
     "description": "This is a placeholder move for The Flake playbook."
   },
   {
+    "id": "f2",
+    "title": "Gear - Normal Weapons",
+    "description": "You get one normal weapon.\n\nNormal weapons (pick one):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Magnum (3-harm close reload loud)",
+      "Shotgun (3-harm close messy loud)",
+      "Big knife (1-harm hand)"
+    ]
+  },
+  {
+    "id": "f3",
+    "title": "Gear - Hidden Weapons",
+    "description": "You get two hidden weapons.\n\nHidden weapons (pick two):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Throwing knives (1-harm close many)",
+      "Holdout pistol (2-harm close loud reload)",
+      "Garrote (3-harm intimate)",
+      "Watchman's flashlight (1-harm hand)",
+      "Weighted gloves/brass knuckles (1-harm hand)",
+      "Butterfly knife/folding knife (1-harm hand)"
+    ]
+  },
+  {
     "id": "fi",
     "title": "Improvement",
     "category": "Improvement",
