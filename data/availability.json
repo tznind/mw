@@ -55,6 +55,7 @@
     "cr11":true
   },
   "The Divine":{
+    "_movesFile": "data/moves/the-divine.json",
     "description": "I am the Light, the Sword.\nI am sent to defend the meek from Darkness.\nAll Evil fears me, for I am its end.",
     "statDistributions":[
         "Charm+1, Cool+1, Sharp-1, Tough+2, Weird=0",
@@ -62,9 +63,20 @@
         "Charm-1, Cool=0, Sharp+1, Tough+2, Weird+1",
         "Charm+1, Cool+1, Sharp=0, Tough+2, Weird-1",
         "Charm-1, Cool+1, Sharp=0, Tough+2, Weird+1"
-    ]
+    ],
+    "luckSpecial":"When you spend a point of Luck, you get word your Mission requires something difficult that must be done. By you. Urgently.",
+    "d1": false,
+    "d2": false,
+    "d3": false,
+    "d4": false,
+    "d5": false,
+    "d6": false,
+    "d7": false,
+    "di": true,
+    "dai": true
   },
   "The Expert":{
+    "_movesFile": "data/moves/the-expert.json",
     "description": "I have dedicated my life to the study of the unnatural. I know their habits, their weaknesses. I may not be youngest or strongest, but my knowledge makes me the biggest threat.",
     "statsDistributions":[
       "Charm-1, Cool+1, Sharp+2, Tough+1, Weird=0",
@@ -72,19 +84,28 @@
       "Charm+1, Cool-1, Sharp+2, Tough+1, Weird=0",
       "Charm-1, Cool+1, Sharp+2, Tough=0, Weird+1",
       "Charm-1, Cool=0, Sharp+2, Tough-1, Weird+2"
-    ]
+    ],
+    "luckSpecial":"When you spend a point of Luck, you discover something happening now is related to something you were involved in years ago.",
+    "ex1": false,
+    "exi": true,
+    "exai": true
   },
   "The Flake":{
-    "description": "Everything’s connected. But not everyone can see the patterns, and most people don’t even look that hard. But me, I can never stop looking deeper. I can never stop seeing the truth. I spot the patterns. That’s how I found the monsters, and that’s how I help kill them.",
+    "_movesFile": "data/moves/the-flake.json",
+    "description": "Everything's connected. But not everyone can see the patterns, and most people don't even look that hard. But me, I can never stop looking deeper. I can never stop seeing the truth. I spot the patterns. That's how I found the monsters, and that's how I help kill them.",
     "statsDistributions":[
       "Charm+1, Cool+1, Sharp+2, Tough-1, Weird=0",
       "Charm=0, Cool+1, Sharp+2, Tough-1, Weird+1",
       "Charm+1, Cool-1, Sharp+2, Tough+1, Weird=0",
       "Charm+1, Cool-1, Sharp+2, Tough=0, Weird+1",
       "Charm-1, Cool-1, Sharp+2, Tough=0, Weird+2"
-    ]
+    ],
+    "f1": false,
+    "fi": true,
+    "fai": true
   },
   "The Initiate":{
+    "_movesFile": "data/moves/the-initiate.json",
     "description": "Since the dawn of history, we have been the bulwark against Darkness. We know the Evils of the world, and we stand against them so that the mass of humanity need not fear. We are the Flame that cleanses the Shadows.",
     "statsDistributions":[
       "Charm-1, Cool+1, Sharp=0, Tough+1, Weird+2",
@@ -92,19 +113,27 @@
       "Charm-1, Cool=0, Sharp-1, Tough+2, Weird+2",
       "Charm+1, Cool-1, Sharp+1, Tough=0, Weird+2",
       "Charm=0, Cool=0, Sharp=0, Tough+1, Weird+2"
-    ]
+    ],
+    "i1": false,
+    "ii": true,
+    "iai": true
   },
   "The Monstrous":{
-    "description": "I feel the hunger, the lust to destroy. But I fight it: I never give in. I’m not human any more, not really, but I have to protect those who still are. That way I can tell myself I’m different to the other monsters. Sometimes I can even believe it.",
+    "_movesFile": "data/moves/the-monstrous.json",
+    "description": "I feel the hunger, the lust to destroy. But I fight it: I never give in. I'm not human any more, not really, but I have to protect those who still are. That way I can tell myself I'm different to the other monsters. Sometimes I can even believe it.",
     "statsDistributions":[
       "Charm-1, Cool-1, Sharp=0, Tough+2, Weird+3",
       "Charm-1, Cool+1, Sharp+1, Tough=0, Weird+3",
       "Charm+2, Cool=0, Sharp-1, Tough-1, Weird+3",
       "Charm-2, Cool+2, Sharp=0, Tough=0, Weird+3",
       "Charm=0, Cool-1, Sharp+2, Tough-1, Weird+3"
-    ]
+    ],
+    "m1": false,
+    "mi": true,
+    "mai": true
   },
   "The Mundane":{
+    "_movesFile": "data/moves/the-mundane.json",
     "description": "You heard about how monsters only pick on people with crazy powers who can fight back on even terms? Yeah, me neither. But, hell, I ended up in this monster-hunting team so I gotta do what I can, right?",
     "statsDistributions":[
       "Charm+2, Cool+1, Sharp=0, Tough+1, Weird-1",
@@ -112,20 +141,28 @@
       "Charm+2, Cool=0, Sharp-1, Tough+1, Weird+1",
       "Charm+2, Cool=0, Sharp+1, Tough+1, Weird-1",
       "Charm+2, Cool+1, Sharp+1, Tough=0, Weird-1"
-    ]
+    ],
+    "mu1": false,
+    "mui": true,
+    "muai": true
   },
   "The Professional":{
-    "description": "It’s kind of strange when your regular 9-to-5 job is to hunt down monsters. Still, that’s the job I took on when I joined this outfit. It pays well, and the benefits are good. Like they say “You don’t have to be crazy to work here, but it sure helps!”",
+    "_movesFile": "data/moves/the-professional.json",
+    "description": "It's kind of strange when your regular 9-to-5 job is to hunt down monsters. Still, that's the job I took on when I joined this outfit. It pays well, and the benefits are good. Like they say \"You don't have to be crazy to work here, but it sure helps!\"",
     "statsDistributions":[
       "Charm=0, Cool+2, Sharp-1, Tough+2, Weird-1",
       "Charm-1, Cool+2, Sharp+1, Tough+1, Weird=0",
       "Charm+1, Cool+2, Sharp+1, Tough-1, Weird=0",
       "Charm-1, Cool+2, Sharp+1, Tough=0, Weird+1",
       "Charm=0, Cool+2, Sharp+2, Tough-1, Weird-1"
-    ]
+    ],
+    "p1": false,
+    "pi": true,
+    "pai": true
   },
   "The Spell-Slinger":
   {
+    "_movesFile": "data/moves/the-spell-slinger.json",
     "description":"Fight fire with fire magic.",
     "statsDistributions":[
       "Charm-1, Cool+1, Sharp+1, Tough=0, Weird+2",
@@ -133,29 +170,38 @@
       "Charm-1, Cool=0, Sharp+2, Tough-1, Weird+2",
       "Charm+1, Cool=0, Sharp+1, Tough-1, Weird+2",
       "Charm=0, Cool=0, Sharp+1, Tough=0, Weird+2"
-    ]
+    ],
+    "ss1": false,
+    "ssi": true,
+    "ssai": true
   },
   "The Spooky":{
-    "description": "I can do things, things that normal people can’t. But there’s a price—I haven’t paid it in full, yet, but the bill’s gonna come due soon. It’s best I don’t tell you any more. You get too close, you’ll get hurt.",
+    "_movesFile": "data/moves/the-spooky.json",
+    "description": "I can do things, things that normal people can't. But there's a price—I haven't paid it in full, yet, but the bill's gonna come due soon. It's best I don't tell you any more. You get too close, you'll get hurt.",
     "statsDistributions":[
       "Charm+1, Cool=0, Sharp+1, Tough-1, Weird+2",
       "Charm-1, Cool+1, Sharp=0, Tough+1, Weird+2",
       "Charm+2, Cool=0, Sharp-1, Tough-1, Weird+2",
       "Charm=0, Cool-1, Sharp+1, Tough+1, Weird+2",
       "Charm-1, Cool-1, Sharp+2, Tough=0, Weird+2"
-    ]
-
-
+    ],
+    "sp1": false,
+    "spi": true,
+    "spai": true
   },
   "The Wronged":{
-    "description": "They took my loved ones. Back then I wasn’t strong enough to fight, but I studied, trained, and now I’m ready to cleanse the world of their taint. I’ll kill them all. That’s all I have left."  ,
+    "_movesFile": "data/moves/the-wronged.json",
+    "description": "They took my loved ones. Back then I wasn't strong enough to fight, but I studied, trained, and now I'm ready to cleanse the world of their taint. I'll kill them all. That's all I have left."  ,
     "statsDistributions":[
       "Charm=0, Cool+1, Sharp-1, Tough+2, Weird+1",
       "Charm=0, Cool=0, Sharp+1, Tough+2, Weird=0",
       "Charm+1, Cool=0, Sharp+1, Tough+2, Weird-1",
       "Charm-1, Cool-1, Sharp=0, Tough+2, Weird+2",
       "Charm+1, Cool-1, Sharp=0, Tough+2, Weird+1"
-    ]
+    ],
+    "w1": false,
+    "wi": true,
+    "wai": true
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",

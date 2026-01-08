@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ex1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Expert playbook."
+  },
+  {
+    "id": "exi",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Sharp (Max +3)",
+      "Get +1 Charm (Max +2)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Weird (Max +2)",
+      "Take another Expert move",
+      "Take another Expert move",
+      "Add an option to your haven",
+      "Add an option to your haven",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "exai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Get back one used Luck point",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety"
+    ],
+    "details": true
+  }
+]

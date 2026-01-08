@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sp1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Spooky playbook."
+  },
+  {
+    "id": "spi",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Weird (Max +3)",
+      "Get +1 Charm (Max +2)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Sharp (Max +2)",
+      "Take another Spooky move",
+      "Take another Spooky move",
+      "Change some, or all, your dark side tags",
+      "Get a mystical library, like the Expert's haven option",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "spai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "You discover how to use your powers at a lower price. Delete one dark side tag permanently",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]

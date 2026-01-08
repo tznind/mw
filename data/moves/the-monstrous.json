@@ -1,0 +1,43 @@
+[
+  {
+    "id": "m1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Monstrous playbook."
+  },
+  {
+    "id": "mi",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Charm (Max +2)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Sharp (Max +2)",
+      "Get +1 Tough (Max +2)",
+      "Take another Monstrous move",
+      "Take another Monstrous move",
+      "Gain a haven, like the Expert has, with two options",
+      "Take a natural attacks pick",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "mai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "Free yourself from the curse of your kind. Your curse no longer applies, but you lose 1 Weird",
+      "You turn evil (again). Retire this character, they become one of the Keeper's threats",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]
