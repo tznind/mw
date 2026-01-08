@@ -20,8 +20,60 @@
   },
   {
     "id": "ss1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Spell-Slinger playbook."
+    "title": "Advanced Arcane Training",
+    "description": "If you have two of your three Tools and Techniques at the ready, you may ignore the third one."
+  },
+  {
+    "id": "ss5",
+    "title": "Arcane Reputation",
+    "description": "Pick three big organizations or groups in the supernatural community, which can include some of the more sociable types of monsters. They've heard of you and respect your power. With affected humans, take +1 forward when you **manipulate** them. You may **manipulate** affected monsters as if they were human, with no bonus.",
+    "details": true
+  },
+  {
+    "id": "ss6",
+    "title": "Could've Been Worse",
+    "description": "When you miss a **use magic** roll you can choose one of the following options instead of losing control of the magic:",
+    "pick": [
+      "**Fizzle:** The preparations and materials for the spell are ruined. You'll have to start over from scratch with the prep time doubled.",
+      "**This Is Gonna Suck:** The effect happens, but you trigger all of the listed glitches but one. You pick the one you avoid."
+    ]
+  },
+  {
+    "id": "ss7",
+    "title": "Enchanted Clothing",
+    "description": "Pick an article of every-day clothing–it's enchanted without any change in appearance. Take -1 harm from any source that tries to get at you through the garment.",
+    "details": true
+  },
+  {
+    "id": "ss8",
+    "title": "Forensic Divination",
+    "description": "When you successfully **investigate a mystery**, you may ask \"What magic was done here?\" as a free extra question."
+  },
+  {
+    "id": "ss9",
+    "title": "Go Big or Go Home",
+    "description": "When you must **use magic** as a requirement for Big Magic, take +1 ongoing to those **use magic** rolls."
+  },
+  {
+    "id": "ss10",
+    "title": "Not My Fault",
+    "description": "+1 to **act under pressure** when you are dealing with the consequences of your own spellcasting."
+  },
+  {
+    "id": "ss11",
+    "title": "Practitioner",
+    "description": "Choose two effects available to you under **use magic**. Take +1 to **use magic** whenever you choose one of those effects.",
+    "details": true
+  },
+  {
+    "id": "ss12",
+    "title": "Shield Spell",
+    "description": "When you **protect someone**, gain 2-armour against any harm that is transferred to you. This doesn't stack with your other armour, if any."
+  },
+  {
+    "id": "ss13",
+    "title": "Third Eye",
+    "description": "When you **read a bad situation**, you can open up your third eye for a moment to take in extra information. Take +1 hold on any result of 7 or more, plus you can see invisible things. On a miss, you may still get 1 hold, but you're exposed to supernatural danger. Unfiltered hidden reality is rough on the mind!"
   },
   {
     "id": "ss2",

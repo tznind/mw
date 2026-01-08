@@ -237,7 +237,16 @@
     "ss1": false,
     "ss2": true,
     "ss3": true,
-    "ss4":true,
+    "ss4": true,
+    "ss5": false,
+    "ss6": false,
+    "ss7": false,
+    "ss8": false,
+    "ss9": false,
+    "ss10": false,
+    "ss11": false,
+    "ss12": false,
+    "ss13": false,
     "ssi": true,
     "ssai": true
   },
@@ -254,7 +263,8 @@
     "sp1": false,
     "sp2": true,
     "spi": true,
-    "spai": true
+    "spai": true,
+    "spds": true
   },
   "The Wronged":{
     "_movesFile": "data/moves/the-wronged.json",

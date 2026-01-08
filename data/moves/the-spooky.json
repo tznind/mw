@@ -1,5 +1,39 @@
 [
   {
+    "id":"spds",
+    "title": "👤The Dark Side",
+    "description": "Your powers have an unsavory source, and sometimes  you get tempted to do things you shouldn’t. These could be orders from whatever granted your power, or urges that bubble up from your subconscious. Something like that. Whatever it is, it’s unsettling.\n\nPick three tags for your dark side:",
+    "pick": [
+
+"Violence",
+"Depression",
+"Secrets",
+"Lust",
+"Dark bargain",
+"Guilt",
+"Soulless",
+"Addiction",
+"Mood swings",
+"Rage",
+"Self-destruction",
+"Greed for power",
+"Poor impulse control",
+"Hallucinations",
+"Pain",
+"Paranoia"
+    ],
+    "submoves": [
+      {
+        "title": "Ask",
+        "description": "The Keeper can ask you to do nasty things (in accordance with the tags), when your  powers need you to. If you do whatever is asked, mark experience. If you don’t do it, then your powers are unavailable until the end of the mystery (or until you cave). As you mark off Luck boxes, these requests will get bigger and nastier"
+      },
+      {
+        "title": "Starting Moves",
+        "description": "You get three Spooky Moves"
+      }
+    ]
+  },
+  {
     "id": "sp1",
     "title": "Placeholder Move",
     "description": "This is a placeholder move for The Spooky playbook."
