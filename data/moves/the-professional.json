@@ -1,8 +1,168 @@
 [
   {
+    "id": "p12",
+    "title": "Agency",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "Decide who it is you work for. Are they a black-budget government department, a secret military unit, a clandestine police team, a private individual's crusade, a corporation, a scientific team, or what?\n\nIs the Agency's goal to: destroy monsters, study the supernatural, protect people, gain power, or something else?",
+    "details": true
+  },
+  {
+    "id": "p13",
+    "title": "Agency - Resources",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "Pick two resource tags for the Agency:",
+    "pick": [
+      "Well-armed",
+      "Well-financed",
+      "Rigorous training",
+      "Official pull",
+      "Cover identities",
+      "Offices all over",
+      "Good intel",
+      "Recognised authority",
+      "Weird tech gadgets",
+      "Support teams"
+    ]
+  },
+  {
+    "id": "p14",
+    "title": "Agency - Red Tape",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "Pick two red tape tags:",
+    "pick": [
+      "Dubious motives",
+      "Bureaucratic",
+      "Secretive hierarchy",
+      "Cryptic missions",
+      "Hostile superiors",
+      "Inter-departmental rivalry",
+      "Budget cuts",
+      "Take no prisoners policy",
+      "Live capture policy"
+    ]
+  },
+  {
+    "id": "p11",
+    "title": "Deal with the Agency (+Sharp)",
+    "weight": -2,
+    "hideCheckbox": true,
+    "description": "When you deal with the Agency, requesting help or gear, or making excuses for a failure, roll +Sharp.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You're good—your request for gear or personnel is okayed, or your slip-up goes unnoticed."
+      },
+      {
+        "range": "7-9",
+        "text": "Things aren't so great. You might get chewed out by your superiors and there'll be fallout, but you get what you need for the job."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You screwed up: you might be suspended or under investigation, or just in the doghouse. You certainly aren't going to get any help until you sort it all out."
+      }
+    ]
+  },
+  {
     "id": "p1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Professional playbook."
+    "title": "Bottle It Up",
+    "description": "If you want, you can take up to +3 bonus when you **act under pressure**. For each +1 you use, the Keeper holds 1. That hold can be spent later—one for one—to give you -1 on any move except **act under pressure**."
+  },
+  {
+    "id": "p5",
+    "title": "Unfazeable",
+    "description": "Take +1 Cool (max +3)."
+  },
+  {
+    "id": "p6",
+    "title": "Battlefield Awareness",
+    "description": "You always know what's happening around you, and what to watch out for. Take +1 armour (max 2-armour) on top of whatever you get from your gear."
+  },
+  {
+    "id": "p7",
+    "title": "Leave No One Behind (+Sharp)",
+    "description": "In combat, when you help someone escape, roll +Sharp.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You get them out clean."
+      },
+      {
+        "range": "7-9",
+        "text": "You can either get them out or suffer no harm, you choose."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You fail to get them out and you've attracted hostile attention."
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "title": "Tactical Genius",
+    "description": "When you **read a bad situation**, you may roll +Cool instead of +Sharp."
+  },
+  {
+    "id": "p9",
+    "title": "Medic (+Cool)",
+    "description": "You have a full first aid kit, and the training to heal people. When you do first aid, roll +Cool. This move takes the place of regular first aid.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "The patient is stabilized and healed of 2 harm."
+      },
+      {
+        "range": "7-9",
+        "text": "Choose one: heal 2 harm or stabilize the injury."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You cause an extra 1 harm."
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "title": "Mobility",
+    "description": "You have a truck, van, or car built for monster hunting. Choose two good things and one bad thing about it.",
+    "submoves": [
+      {
+        "title": "Good Things",
+        "description": "Choose two:",
+        "pick": [
+          "Roomy",
+          "Surveillance gear",
+          "Fast",
+          "Stealthy",
+          "Intimidating",
+          "Classic",
+          "Medical kit",
+          "Sleeping space",
+          "Toolkit",
+          "Concealed weapons",
+          "Anonymous",
+          "Armoured (+1 armour inside)",
+          "Tough",
+          "Monster cage"
+        ]
+      },
+      {
+        "title": "Bad Things",
+        "description": "Choose one:",
+        "pickOne": [
+          "Loud",
+          "Obvious",
+          "Temperamental",
+          "Beaten-up",
+          "Gas-guzzler",
+          "Uncomfortable",
+          "Slow",
+          "Old"
+        ]
+      }
+    ]
   },
   {
     "id": "p2",

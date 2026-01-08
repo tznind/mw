@@ -1,5 +1,24 @@
 [
   {
+    "id": "ss3",
+    "title": "🔮 Combat Magic",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "You have a few attack spells you can use as weapons. When you use these spells to **kick some ass**, roll +Weird instead of +Tough. Sometimes the situation may require you to **act under pressure** to cast your spell without problems.\n\nYour combat spells can combine any of your base spells with any of your effects.\n\nPick three (with at least one base):",
+    "pick": [
+      "Base: Blast (2-harm magic close obvious loud)",
+      "Base: Ball (1-harm magic area close obvious loud)",
+      "Base: Missile (1-harm magic far obvious loud)",
+      "Base: Wall (1-harm magic barrier close 1-armour obvious loud)",
+      "Effect: Fire - Add \"+2 harm fire\" to a base. If you get a 10+ on a combat magic roll, the fire won't spread.",
+      "Effect: Force or Wind - Add \"+1 harm forceful\" to a base, or \"+1 armour\" to a wall.",
+      "Effect: Lightning or Entropy - Add \"+1 harm messy\" to a base.",
+      "Effect: Frost or Ice - Adds \"-1 harm +2 armour\" to a wall, or \"+1 harm restraining\" to other bases.",
+      "Effect: Earth - Add \"forceful restraining\" to a base.",
+      "Effect: Necromantic - Add \"life-drain\" to a base."
+    ]
+  },
+  {
     "id": "ss1",
     "title": "Placeholder Move",
     "description": "This is a placeholder move for The Spell-Slinger playbook."
@@ -14,6 +33,25 @@
       "Old revolver (2-harm close reload loud)",
       "Ritual knife (1-harm hand)",
       "Heirloom sword (2-harm hand messy)"
+    ]
+  },
+  {
+    "id":"ss4",
+    "weight": -2,
+    "title": "🪄 Tools and Techniques",
+    "hideCheckbox": true,
+    "description":"To use your combat magic effectively, you rely on a collection of tools and techniques. Mark 3 out of the 4 below (you'll need them all)",
+    "pick": [
+      "Consumables: You need certain supplies— powders, oils, etc—on hand, some will be used up each cast. If you don’t have them, take 1-harm ignore-armour when you cast.",
+      "Foci: You need wands, staves, and other obvious props to focus. If you don’t have what you need, your combat magic does 1 less harm.",
+      "Gestures: You need to wave your hands around to use combat magic. If you’re restrained, take -1 ongoing for combat magic.",
+      "Incantations: You must speak in an arcane language to control your magic. If you use combat magic without speaking, **act under pressure** to avoid scrambling your thoughts."
+    ],
+    "submoves": [
+      {
+        "title": "Starting Moves",
+        "description": "You get this move plus 3 more"
+      }
     ]
   },
   {
