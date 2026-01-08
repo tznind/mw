@@ -1,0 +1,83 @@
+[
+  {
+    "id": "w1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Wronged playbook."
+  },
+  {
+    "id": "w2",
+    "title": "Gear",
+    "description": "Pick one signature weapon and two practical weapons.\n\nYou have protective wear, suited to your look, worth 1-armour.\n\nIf you want, you may take a classic car, classic motorcycle, plain pickup, or plain van.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "details": true
+  },
+  {
+    "id": "w3",
+    "title": "Signature Weapons",
+    "description": "Pick one signature weapon.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Sawn-off shotgun (3-harm hand/close messy loud reload)",
+      "Hand cannon (3-harm close loud)",
+      "Fighting knife (2-harm hand quiet)",
+      "Huge sword or huge axe (3-harm hand messy heavy)",
+      "Specialist weapons for destroying your foes (e.g. wooden stakes and mallet for vampires, silver dagger for werewolves, etc.). 4-harm against the specific creatures it targets, 1-harm otherwise, and other tags by agreement with the Keeper.",
+      "Enchanted dagger (2-harm hand magic)",
+      "Chainsaw (3-harm hand messy unreliable loud heavy)"
+    ]
+  },
+  {
+    "id": "w4",
+    "title": "Practical Weapons",
+    "description": "Pick two practical weapons.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Shotgun (3-harm close messy loud)",
+      "Big knife (1-harm hand)",
+      "Brass knuckles (1-harm hand stealthy)",
+      "Assault rifle (3-harm close area loud reload)"
+    ]
+  },
+  {
+    "id": "wi",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Tough (Max +3)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Sharp (Max +2)",
+      "Get +1 Weird (Max +2)",
+      "Take another Wronged move",
+      "Take another Wronged move",
+      "Gain a haven, like the Expert has, with two options",
+      "Add one more option to your haven",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "wai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "You track down the specific monster(s) responsible for your loss. The Keeper must make the next mystery about them",
+      "Change the target of your vengeful rage. Pick a new monster breed: I know my prey now applies to them instead",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]

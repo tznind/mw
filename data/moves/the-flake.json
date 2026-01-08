@@ -1,0 +1,158 @@
+[
+  {
+    "id": "f1",
+    "title": "Connect the Dots (+Sharp)",
+    "description": "At the beginning of each mystery, if you look for the wider patterns that current events might be part of, roll +Sharp.",
+    "tracks": [
+      {
+        "name": "Hold",
+        "max": 3,
+        "shape": "square"
+      }
+    ],
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "Hold 3. Spend your hold during the mystery to ask the Keeper any one of the following questions:",
+        "bullets": [
+          "Is this person connected to current events more than they are saying?",
+          "When and where will the next critical event occur?",
+          "What does the monster want from this person?",
+          "Is this connected to previous mysteries we have investigated?",
+          "How does this mystery connect to the bigger picture?"
+        ]
+      },
+      {
+        "range": "7-9",
+        "text": "Hold 1."
+      }
+    ]
+  },
+  {
+    "id": "f4",
+    "title": "Crazy Eyes",
+    "description": "You get +1 Weird (max +3)."
+  },
+  {
+    "id": "f5",
+    "title": "See, It All Fits Together",
+    "description": "You can use Sharp instead of Charm when you **manipulate someone**."
+  },
+  {
+    "id": "f6",
+    "title": "Suspicious Mind",
+    "description": "If someone lies to you, you know it."
+  },
+  {
+    "id": "f7",
+    "title": "Often Overlooked (+Weird)",
+    "description": "When you act all crazy to avoid something, roll +Weird.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "You're regarded as unthreatening and unimportant."
+      },
+      {
+        "range": "7-9",
+        "text": "Pick one: unthreatening or unimportant."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You draw lots (but not all) of the attention."
+      }
+    ]
+  },
+  {
+    "id": "f8",
+    "title": "Contrary",
+    "description": "When you seek out and receive someone's honest advice on the best course of action for you and then do something else instead, mark experience. If you do exactly the opposite of their advice, you also take +1 ongoing on any moves you make pursuing that course."
+  },
+  {
+    "id": "f9",
+    "title": "Net Friends (+Charm)",
+    "description": "You know a lot of people on the Internet. When you contact a net friend to help you with a mystery, roll +Charm.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "They're available and helpful—they can fix something, break a code, hack a computer, or get you some special information."
+      },
+      {
+        "range": "7-9",
+        "text": "They're prepared to help, but it's either going to take some time or you're going to have to do part of it yourself."
+      },
+      {
+        "range": "≤ 6",
+        "text": "You burn some bridges."
+      }
+    ]
+  },
+  {
+    "id": "f10",
+    "title": "Sneaky",
+    "description": "When you attack from ambush, or from behind, inflict +2 harm."
+  },
+  {
+    "id": "f2",
+    "title": "Gear - Normal Weapons",
+    "description": "You get one normal weapon.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Hunting rifle (2-harm far loud)",
+      "Magnum (3-harm close reload loud)",
+      "Shotgun (3-harm close messy loud)",
+      "Big knife (1-harm hand)"
+    ]
+  },
+  {
+    "id": "f3",
+    "title": "Gear - Hidden Weapons",
+    "description": "You get two hidden weapons.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Throwing knives (1-harm close many)",
+      "Holdout pistol (2-harm close loud reload)",
+      "Garrote (3-harm intimate)",
+      "Watchman's flashlight (1-harm hand)",
+      "Weighted gloves/brass knuckles (1-harm hand)",
+      "Butterfly knife/folding knife (1-harm hand)"
+    ]
+  },
+  {
+    "id": "fi",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Sharp (Max +3)",
+      "Get +1 Charm (Max +2)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Weird (Max +2)",
+      "Take another Flake move",
+      "Take another Flake move",
+      "Get a haven, like the Expert has, with two options",
+      "Gain another option for your haven",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "fai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]

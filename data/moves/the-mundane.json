@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mu1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Mundane playbook."
+  },
+  {
+    "id": "mu2",
+    "title": "Mundane Weapons",
+    "description": "You get two mundane weapons.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Golf club, baseball bat, cricket bat, or hockey stick (2-harm hand innocuous messy)",
+      "Pocket knife or multitool (1-harm hand useful small)",
+      "Small handgun (2-harm close loud reload)",
+      "Hunting rifle (3-harm far loud reload)",
+      "Sledge-hammer or fire axe (3-harm hand messy)",
+      "Nunchuks (2-harm hand area)"
+    ]
+  },
+  {
+    "id": "mu3",
+    "title": "Means of Transport",
+    "description": "You get one means of transport.",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pickOne": [
+      "Skateboard",
+      "Bicycle",
+      "Fairly new car in decent condition",
+      "Classic car in terrible condition",
+      "Motorcycle",
+      "Van"
+    ]
+  },
+  {
+    "id": "mui",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Charm (Max +3)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Sharp (Max +2)",
+      "Get +1 Tough (Max +2)",
+      "Take another Mundane move",
+      "Take another Mundane move",
+      "Get back one used Luck point",
+      "Get back one used Luck point",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "muai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "Get back one used Luck point",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "i1",
+    "title": "Placeholder Move",
+    "description": "This is a placeholder move for The Initiate playbook."
+  },
+  {
+    "id": "i2",
+    "title": "Gear",
+    "description": "If your Sect has fighting arts or obsolete gear (see next page) then pick three old-fashioned weapons. If the Sect has modernised or nifty gadgets, you may pick two modern weapons. Otherwise, pick two old-fashioned weapons and one modern weapon.\n\nYou also get old-fashioned armour (1-armour heavy).",
+    "weight": -1,
+    "hideCheckbox": true
+  },
+  {
+    "id": "i3",
+    "title": "Old Fashioned Weapons",
+    "description": "Old-fashioned weapons (pick either two or three, as above):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      "Sword (2-harm hand messy)",
+      "Axe (2-harm hand messy)",
+      "Big sword (3-harm hand messy heavy)",
+      "Big axe (3-harm hand messy slow heavy)",
+      "Silver knife (1-harm hand silver)",
+      "Fighting sticks (1-harm hand quick)",
+      "Spear (2-harm hand/close)",
+      "Mace (2-harm hand messy)",
+      "Crossbow (2-harm close slow)"
+    ]
+  },
+  {
+    "id": "i4",
+    "title": "Modern Weapons",
+    "description": "Modern weapons (pick either one or two, as above):",
+    "weight": -1,
+    "hideCheckbox": true,
+    "pick": [
+      ".38 revolver (2-harm close reload loud)",
+      "9mm (2-harm close loud)",
+      "Sniper rifle (3-harm far)",
+      "Magnum (3-harm close reload loud)",
+      "Shotgun (3-harm close messy)"
+    ]
+  },
+  {
+    "id": "ii",
+    "title": "Improvement",
+    "category": "Improvement",
+    "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
+    "pick": [
+      "Get +1 Weird (Max +3)",
+      "Get +1 Cool (Max +2)",
+      "Get +1 Sharp (Max +2)",
+      "Get +1 Tough (Max +2)",
+      "Take another Initiate move",
+      "Take another Initiate move",
+      "Get command of your chapter of the Sect",
+      "Get a Sect team under your command",
+      "Take a move from another playbook",
+      "Take a move from another playbook"
+    ]
+  },
+  {
+    "id": "iai",
+    "title": "Advanced Improvements",
+    "category": "Improvement",
+    "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
+    "pick": [
+      "Get +1 to any rating (Max +3)",
+      "Change this hunter to a new type",
+      "Create a second hunter to play as well as this one",
+      "Mark two of the basic moves as advanced",
+      "Mark another two of the basic moves as advanced",
+      "Retire this hunter to safety",
+      "Become the leader, or effective leader, of the whole Sect",
+      "Get back one used Luck point"
+    ],
+    "details": true
+  }
+]
