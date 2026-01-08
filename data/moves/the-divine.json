@@ -93,6 +93,40 @@
     ]
   },
   {
+    "id": "dg",
+    "title": "Gear",
+    "category": "The Divine",
+    "description": "Pick one divine weapon:",
+    "hideCheckbox": true,
+    "pickOne": [
+      "Flaming sword (3-harm hand fire holy)",
+      "Thunder hammer (3-harm hand stun holy)",
+      "Razor whip (3-harm hand area messy holy)",
+      "Five demon bag (3-harm close magic holy)",
+      "Silver trident (3-harm hand silver holy)"
+    ],
+    "submoves": [
+      {
+        "title": "Armor",
+        "description": "You also get divine armour (1-armour holy). It has a look suited to your divine origin: __doarm__"
+      }
+    ]
+  },
+  {
+    "id": "dm",
+    "title": "Mission",
+    "category": "The Divine",
+    "hideCheckbox": true,
+    "description": "You have been put on Earth for a purpose. Pick one:",
+    "pickOne": [      
+      "You are here to fight the schemes of an Adversary.",
+      "The End of Days approaches. Your role is to guide these hunters and prevent it from coming to pass.",
+      "The End of Days approaches. Your role is to guide these hunters and ensure it comes to pass.",
+      "You have been exiled. You must work for the cause of Good without drawing attention from your brothers and sisters, as they are bound to execute you for your crimes.",
+      "One of the other hunters has a crucial role to play in events to come. You must prepare them for their role, and protect them at any cost."
+    ] 
+  },
+  {
     "id": "di",
     "title": "Improvement",
     "category": "Improvement",
