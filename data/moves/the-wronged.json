@@ -1,8 +1,96 @@
 [
   {
+    "id": "w5",
+    "title": "👪 Who You Lost",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "Who did you lose? Pick one or more:",
+    "pick": [
+      "Your parent(s): __wparent:Name__",
+      "Your sibling(s): __wsibling:Name__",
+      "Your spouse/partner: __wpartner:Name__",
+      "Your child(ren): __wchild:Name__",
+      "Your best friend(s): __wfriend:Name__"
+    ]
+  },
+  {
+    "id": "w6",
+    "title": "💔 What Did It & Why",
+    "weight": -3,
+    "hideCheckbox": true,
+    "description": "What did it? With the Keeper's agreement, pick the monster breed.\n\nMy prey: __wprey:Monster Breed__\n\nWhy couldn't you save them? You were (pick one or more):",
+    "pick": [
+      "At fault",
+      "Selfish",
+      "Injured",
+      "Weak",
+      "Slow",
+      "Scared",
+      "In denial",
+      "Complicit"
+    ]
+  },
+  {
     "id": "w1",
-    "title": "Placeholder Move",
-    "description": "This is a placeholder move for The Wronged playbook."
+    "title": "I Know My Prey",
+    "weight": -2,
+    "description": "You get +1 ongoing when knowingly investigating, pursuing or fighting the breed of monster that caused your loss.",
+    "submoves": [
+      {
+        "title": "Starting Moves",
+        "description": "You get this move and 2 others of your choice below"
+      }
+    ]
+  },
+  {
+    "id": "w7",
+    "title": "Berserk",
+    "description": "No matter how much harm you take, you can always keep going until the current fight is over. During a fight, the Keeper may not use harm moves on you and you cannot die. When the fight ends, all harm takes effect as normal."
+  },
+  {
+    "id": "w8",
+    "title": "NEVER AGAIN",
+    "description": "In combat, you may choose to **protect someone** without rolling, as if you had rolled a 10+, but you may not choose to \"suffer little harm.\""
+  },
+  {
+    "id": "w9",
+    "title": "What Does Not Kill Me...",
+    "description": "If you have suffered harm in a fight, you gain +1 ongoing until the fight is over."
+  },
+  {
+    "id": "w10",
+    "title": "Fervor",
+    "description": "When you **manipulate someone**, roll +Tough instead of +Charm."
+  },
+  {
+    "id": "w11",
+    "title": "Safety First",
+    "description": "You have jury-rigged extra protection into your gear, giving you +1 armour (maximum 2-armour)."
+  },
+  {
+    "id": "w12",
+    "title": "DIY Surgery (+Cool)",
+    "description": "When you do quick and dirty first aid on someone (including yourself), roll +Cool.",
+    "outcomes": [
+      {
+        "range": "≥ 10",
+        "text": "It's all good, it counts as normal first aid, plus stabilize the injury and heal 1 harm."
+      },
+      {
+        "range": "7-9",
+        "text": "It counts as normal first aid, plus one of these, your choice:",
+        "bullets": [
+          "Stabilise the injury but the patient takes -1 forward.",
+          "Heal 1-harm and stabilise for now, but it will return as 2-harm and become unstable again later.",
+          "Heal 1-harm and stabilise but the patient takes -1 ongoing until it's fixed properly."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "w13",
+    "title": "Tools Matter",
+    "description": "With your signature weapon (see your gear, below), you get +1 to **kick some ass**."
   },
   {
     "id": "w2",
