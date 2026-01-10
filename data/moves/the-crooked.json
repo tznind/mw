@@ -111,7 +111,8 @@
   {
     "id": "cr2",
     "title": "Crew",
-    "description": "You have a regular crew, a team of three or four people who will help you out with pretty much anything. They count as a team (see page 119)."
+    "description": "You have a regular crew, a team of three or four people who will help you out with pretty much anything. They count as a team.",
+    "details": true
   },
   {
     "id": "cr3",
