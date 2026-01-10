@@ -117,7 +117,8 @@
   {
     "id": "cr3",
     "title": "Deal with the Devil",
-    "description": "You sold your soul to the Devil. Pick one or two things you got out of the deal: wealth, fame, youth, sensual gratification, skill (add +1 to two ratings). Payment is due either when you die, in six months (if you picked two things) or otherwise in a year.",
+    "description": "You sold your soul to the Devil. Pick one or two things you got out of the deal. Payment is due either when you die, in six months (if you picked two things) or otherwise in a year",
+    "pick": ["wealth", "fame", "youth", "sensual gratification", "skill (add +1 to two ratings)"],
     "details": true
   },
   {
