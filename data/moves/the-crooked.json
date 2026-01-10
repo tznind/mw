@@ -141,12 +141,14 @@
   {
     "id": "cr7",
     "title": "Home Ground",
-    "description": "Your crew made a point of keeping the locals happy - keeping them safe, ensuring things always went down okay. When you're back in your old neighbourhood, you can always find people who will hide you or help you with a minor favour, no questions asked."
+    "description": "Your crew made a point of keeping the locals happy - keeping them safe, ensuring things always went down okay. When you're back in your old neighbourhood, you can always find people who will hide you or help you with a minor favour, no questions asked.",
+    "details": true 
   },
   {
     "id": "cr8",
     "title": "Notorious",
-    "description": "You have a reputation from your criminal past. When you reveal who you are, your terrifying reputation counts as a reason for people to do what you ask, for the **Manipulate someone** move. Revealing your identity to someone can create other problems later, of course."
+    "description": "You have a reputation from your criminal past. When you **reveal who you are**, your terrifying reputation counts as a reason for people to do what you ask, for the **Manipulate someone** move. Revealing your identity to someone can create other problems later, of course.",
+    "details": true
   },
   {
     "id": "cr9",
