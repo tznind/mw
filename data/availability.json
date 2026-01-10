@@ -183,6 +183,7 @@
       "Charm+2, Cool 0, Sharp+1, Tough+1, Weird-1",
       "Charm+2, Cool+1, Sharp+1, Tough 0, Weird-1"
     ],
+    "msm":true,
     "mu1": false,
     "mu2": true,
     "mu3": true,

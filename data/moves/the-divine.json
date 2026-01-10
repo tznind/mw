@@ -124,11 +124,16 @@
       "The End of Days approaches. Your role is to guide these hunters and ensure it comes to pass.",
       "You have been exiled. You must work for the cause of Good without drawing attention from your brothers and sisters, as they are bound to execute you for your crimes.",
       "One of the other hunters has a crucial role to play in events to come. You must prepare them for their role, and protect them at any cost."
-    ] 
+    ] ,
+    "submoves": [{
+      "title": "Starting Moves",
+      "description": "You get all of the basic moves, plus three Divine moves."
+    }]
   },
   {
     "id": "di",
     "title": "Improvement",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "You get all of the basic moves, plus pick **three Divine moves**. When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
     "pick": [
@@ -147,6 +152,7 @@
   {
     "id": "dai",
     "title": "Advanced Improvements",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
     "pick": [

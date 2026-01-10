@@ -1,5 +1,12 @@
 [
   {
+    "id": "fsm",
+    "weight": -1,
+    "hideCheckbox": true,
+    "title": "Starting Moves",
+    "description": "You get all of the basic moves, plus pick three Flake moves"
+  },
+  {
     "id": "f1",
     "title": "Connect the Dots (+Sharp)",
     "description": "At the beginning of each mystery, if you look for the wider patterns that current events might be part of, roll +Sharp.",
@@ -124,6 +131,7 @@
   {
     "id": "fi",
     "title": "Improvement",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
     "pick": [
@@ -142,6 +150,7 @@
   {
     "id": "fai",
     "title": "Advanced Improvements",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
     "pick": [

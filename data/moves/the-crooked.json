@@ -213,6 +213,7 @@
   {
     "id": "cri",
     "title": "Improvement",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "You get all of the basic moves, plus pick one **Background** move and two **Crooked** moves. When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
     "pick": [
@@ -231,6 +232,7 @@
   {
     "id": "crai",
     "title": "Advanced Improvements",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
     "pick": [

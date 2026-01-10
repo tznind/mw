@@ -71,6 +71,7 @@
       "id": "ci",
       "title": "Improvement",
       "category": "Improvement",
+      "hideCheckbox": true,
       "description": "You get all of the basic moves, **Destiny's Plaything**, **I'm Here For a Reason** and one more of your choice. When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
       "pick": [
           "Get +1 Charm (Max +3)",
@@ -89,6 +90,7 @@
     {
       "id": "cai",
       "title": "Advanced Improvements",
+      "hideCheckbox": true,
       "category": "Improvement",
       "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
       "pick": [

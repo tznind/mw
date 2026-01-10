@@ -175,6 +175,7 @@
   {
     "id": "mi",
     "title": "Improvement",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
     "pick": [
@@ -193,6 +194,7 @@
   {
     "id": "mai",
     "title": "Advanced Improvements",
+    "hideCheckbox": true,
     "category": "Improvement",
     "description": "After you have leveled up *five* times, you additionally qualify for advanced improvements.",
     "pick": [
