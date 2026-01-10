@@ -104,6 +104,7 @@
       "Charm+1, Cool-1, Sharp+2, Tough 0, Weird+1",
       "Charm-1, Cool-1, Sharp+2, Tough 0, Weird+2"
     ],
+    "luckSpecial":"When you spend a point of Luck, pick an aspect of the current situation. The Keeper will tell you what other conspiracies that aspect connects to",
     "f1": false,
     "f2": true,
     "f3": true,
@@ -127,6 +128,7 @@
       "Charm+1, Cool-1, Sharp+1, Tough 0, Weird+2",
       "Charm 0, Cool 0, Sharp 0, Tough+1, Weird+2"
     ],
+    "luckSpecial":"When you spend a point of Luck, something goes wrong for your Sect: an ill-advised project or a disastrous operation.",
     "i1": true,
     "i2": true,
     "i3": true,
@@ -155,6 +157,7 @@
       "Charm-2, Cool+2, Sharp 0, Tough 0, Weird+3",
       "Charm 0, Cool-1, Sharp+2, Tough-1, Weird+3"
     ],
+    "luckSpecial":"When you spend a point of Luck, your monster side gains power: your Curse may become stronger, or another Breed disadvantage may manifest.",
     "m1": false,
     "m2": true,
     "m3": false,
@@ -183,6 +186,7 @@
       "Charm+2, Cool 0, Sharp+1, Tough+1, Weird-1",
       "Charm+2, Cool+1, Sharp+1, Tough 0, Weird-1"
     ],
+    "luckSpecial":"When you spend a point of Luck, you'll find something weird—maybe even useful!",
     "msm":true,
     "mu1": false,
     "mu2": true,
@@ -207,6 +211,7 @@
       "Charm-1, Cool+2, Sharp+1, Tough 0, Weird+1",
       "Charm 0, Cool+2, Sharp+2, Tough-1, Weird-1"
     ],
+    "luckSpecial":"When you spend a point of Luck, your next mission from the Agency comes with lots of Red Tape. Lots.",
     "p1": false,
     "p2": true,
     "p3": true,
@@ -235,6 +240,7 @@
       "Charm+1, Cool 0, Sharp+1, Tough-1, Weird+2",
       "Charm 0, Cool 0, Sharp+1, Tough 0, Weird+2"
     ],
+    "luckSpecial":" When you spend a point of Luck, the official council of wizards is going to poke their nose into your business.",
     "ss1": false,
     "ss2": true,
     "ss3": true,
@@ -261,6 +267,7 @@
       "Charm 0, Cool-1, Sharp+1, Tough+1, Weird+2",
       "Charm-1, Cool-1, Sharp+2, Tough 0, Weird+2"
     ],
+    "luckSpecial":"As you mark off Luck boxes, your dark side's needs will get nastier.",
     "sp1": false,
     "sp2": true,
     "sp3": false,
@@ -284,6 +291,7 @@
       "Charm-1, Cool-1, Sharp 0, Tough+2, Weird+2",
       "Charm+1, Cool-1, Sharp 0, Tough+2, Weird+1"
     ],
+    "luckSpecial":"When you spend a point of Luck, you find a dangerous lead on your prey.",
     "w1": true,
     "w2": true,
     "w3": true,
