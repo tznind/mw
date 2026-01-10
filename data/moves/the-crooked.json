@@ -180,7 +180,13 @@
     "title": "Background",
     "takeFrom": ["Background"],
     "weight": -1,
-    "hideCheckbox": true
+    "hideCheckbox": true,
+    "submoves": [
+      {
+        "title": "Starting Moves",
+        "description": "You get all the basic moves, and two Crooked moves"
+      }
+    ]
   },
   {
     "id": "cr11",
