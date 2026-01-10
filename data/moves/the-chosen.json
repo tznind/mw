@@ -71,6 +71,7 @@
       "id": "ci",
       "title": "Improvement",
       "category": "Improvement",
+      "description": "You get all of the basic moves, **Destiny's Plaything**, **I'm Here For a Reason** and one more of your choice. When you have filled all five experience boxes, you level up. Erase the marks and pick from below.",
       "pick": [
           "Get +1 Charm (Max +3)",
           "Get +1 Weird (Max +3)",
@@ -82,7 +83,8 @@
           "Gain an ally",
           "Take a move from another playbook (mark below)",
           "Take a move from another playbook (mark below)"
-        ]
+        ],
+        "details": true 
     },
     {
       "id": "cai",
