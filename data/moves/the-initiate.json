@@ -158,16 +158,9 @@
     "description": "When you **use magic**, you can ask a question from the **investigate a mystery** move as your effect."
   },
   {
-    "id": "i2",
-    "title": "Gear",
-    "description": "If your Sect has fighting arts or obsolete gear (see next page) then pick three old-fashioned weapons. If the Sect has modernised or nifty gadgets, you may pick two modern weapons. Otherwise, pick two old-fashioned weapons and one modern weapon.\n\nYou also get old-fashioned armour (1-armour heavy).",
-    "weight": -1,
-    "hideCheckbox": true
-  },
-  {
     "id": "i3",
     "title": "Old Fashioned Weapons",
-    "description": "Old-fashioned weapons (pick either two or three, as above):",
+    "description": "If your Sect has fighting arts or obsolete gear then pick three old-fashioned weapons, otherwise pick two:",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [
@@ -185,7 +178,7 @@
   {
     "id": "i4",
     "title": "Modern Weapons",
-    "description": "Modern weapons (pick either one or two, as above):",
+    "description": "If your Sect has *modernised* or *nifty gadgets*, you make take two modern weapons, otherwise pick one:",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [
@@ -194,6 +187,12 @@
       "Sniper rifle (3-harm far)",
       "Magnum (3-harm close reload loud)",
       "Shotgun (3-harm close messy)"
+    ],
+    "submoves": [
+      {
+        "title": "Armour",
+        "description": "You also get old-fashioned armour (1-armour heavy)."
+      }
     ]
   },
   {
