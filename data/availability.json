@@ -284,7 +284,6 @@
   "The Wronged":{
     "_movesFile": "data/moves/the-wronged.json",
     "description": "They took my loved ones. Back then I wasn't strong enough to fight, but I studied, trained, and now I'm ready to cleanse the world of their taint. I'll kill them all. That's all I have left."  ,
-    "cards": ["history"],
     "statDistributions":[
       "Charm 0, Cool+1, Sharp-1, Tough+2, Weird+1",
       "Charm 0, Cool 0, Sharp+1, Tough+2, Weird 0",
@@ -312,7 +311,7 @@
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
     "description": "Universal moves available to all characters.",
-    "cards": [],
+    "cards": ["history"],
     "e1": false,
     "kick": true,
     "act-pressure": true,
