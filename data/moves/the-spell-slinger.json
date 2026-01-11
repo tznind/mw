@@ -122,7 +122,8 @@
       "Take a move from another playbook",
       "Take a move from another playbook",
       "Take another Combat Magic pick"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "ssai",

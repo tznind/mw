@@ -227,7 +227,8 @@
       "Recover a stash of money from the old days, enough to live without care... for a year or two",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "crai",

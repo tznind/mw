@@ -194,7 +194,8 @@
       "Add an option to your haven",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "exai",

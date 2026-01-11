@@ -189,7 +189,8 @@
       "Take a natural attacks pick",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "mai",

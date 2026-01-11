@@ -147,7 +147,8 @@
       "Gain a lesser divine being as an ally, sent from above to help with your mission",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "dai",

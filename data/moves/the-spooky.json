@@ -196,7 +196,8 @@
       "Get a mystical library, like the Expert's haven option",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "spai",

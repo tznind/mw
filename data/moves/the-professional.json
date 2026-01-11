@@ -226,7 +226,8 @@
       "Get command of an Agency team of monster hunters",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "pai",

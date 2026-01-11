@@ -213,7 +213,8 @@
       "Get a Sect team under your command",
       "Take a move from another playbook",
       "Take a move from another playbook"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "iai",
