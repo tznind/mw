@@ -281,6 +281,7 @@
     "title": "Use Magic (+Weird)",
     "description": "When you use magic, say what you're trying to achieve and how you do the spell, then roll +Weird.",
     "category": "Basic Moves",
+    "hideCheckbox": true,
     "outcomes": [
         {
             "range": "≥ 10",
