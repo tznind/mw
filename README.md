@@ -17,6 +17,11 @@ It is online at https://tznind.github.io/mw/cs.html
              ♜&nbsp;<a title="The Divine" href="https://tznind.github.io/mw/cs.html?role=The+Divine&name=Castle&player=Me&pronouns=He%2FHim&look=A+rumpled+trench+coat%2C+loosened+tie%2C+and+an+intense%2C+otherworldly+stare.&move_dg_pickone=1&doarm=magic%2C+appearing+only+when+needed&move_dm_pickone=1&move_d1=1&move_d2=1&move_d4=1&move_d5=1&move_di_p6=1&move_di_p7=1&move_di_p1=1&charm=-1&cool=%2B0&sharp=%2B1&tough=%2B3&weird=%2B1&track_luck=2&history_cnt=3&history_0_name=Bean+Winchester&history_0_details=If+you+are+protecting+another+hunter+as+your+mission%2C+tell+them+this%3A+You+have+a+crucial+role+in+what+is+to+come.+I+am+here+to+guide+and+defend+you.&history_1_name=Jack+Killing&history_1_details=They+are+an+abomination%2C+and+should+be+destroyed.+Except+you+can%27t%E2%80%93+They+are+a+Nephilim%2C+literally+against+gods+law+but...+I+can%27t+help+myself&history_2_details=They+saved+your+life%2C+and+you+understand+%28intellectually+at+least%29+that+you+owe+them+for+it.&history_2_name=Sam+Pinchester&hide_untaken=1">Castle</a>
     </td>
       </tr>
+      <tr>
+        <td>
+        <a title="The Expert" href="https://tznind.github.io/mw/cs.html?role=The+Expert&name=Dana+Skullington&player=F&pronouns=She%2FHer&look=Sharp-suited%2C+professional+woman+with+straight+auburn+hair+and+a+skeptical+gaze.&charm=%2B1&cool=-1&sharp=%2B2&tough=%2B1&weird=%2B0&history_cnt=3&history_0_name=Wolf+Moulder&history_0_details=They+came+to+you+for+advice%2C+and+your+advice+got+them+out+of+trouble.+My+partner+at+the+Agency%2C+he+is+always+chasing+ghosts+and+conspiracies%21&history_1_name=Bill&history_1_details=A+distant+relation.+My+brother&history_2_details=You+were+taught+by+the+same+master+it+ended+as+us+being+bitter+rivals.&history_2_name=Danny+Firestone&move_ex9_p5=1&move_ex9_p8=1&move_ex9_p6=1&move_ex2_p9=1&move_ex2_p8=1&move_ex2_p7=1&move_ex1=1&move_ex6=1&move_exi_p9=1&move_exi_p10=1&move_e1_1=1&takeFrom_e1_role=The+Professional&takeFrom_e1_move=p9&move_e1_2=1&takeFrom_e1_2_role=The+Initiate&takeFrom_e1_2_move=i11&hide_untaken=1">Dana&nbsp;Skullington</a>          
+        </td>
+      </tr>
 </table>
 
 ---
