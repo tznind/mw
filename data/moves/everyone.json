@@ -1,7 +1,7 @@
 [
   {
     "id": "e1",
-    "title": "Get a move from another playbook",
+    "title": "Get a move from another playbook (Requires Improvement)",
     "description": "Mark this move when you take the respective Improvement.",
     "multiple": 2,
     "weight": 4,
