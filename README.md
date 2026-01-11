@@ -30,6 +30,9 @@ It is online at https://tznind.github.io/mw/cs.html
                      <tr>
                      <td width="33%">🧛&nbsp;<a title="The Monstrous" href="https://tznind.github.io/mw/cs.html?role=The+Monstrous&name=Angelicious&player=Ant&pronouns=He%2FHim&look=Wearing+cool+leather+coat+and+tousled+black+hair+-+I%27ve+a+face+everyone+loves+or+loves+to+hate.&charm=%2B2&cool=%2B0&sharp=-1&tough=-1&weird=%2B3&track_luck=3&track_harm=4&unstable=1&track_xp=3&history_cnt=2&history_0_name=Bouff%C3%A9+Winters&history_0_details=You+lost+control+one+time%2C+and+almost+killed+them.+It+was+when+I+was+romantically+feeding+and+it+went+too+far.&history_1_details=You+fought+together+against+the+odds%2C+and+prevailed.+My+vampire+bromance+partner.&history_1_name=Spoke&takeFrom_mb_role=Curses&takeFrom_mb_move=cur2&move_cur2_dtl=Sunlight%2C+I%27m+a+vampire&move_cn_p1=1&move_cn_p6=1&move_m2_pickone=6&move_m1=1&move_m9=1&hide_untaken=1">Angelicious</a>
             </td>
+          <td>
+            📰&nbsp;<a title="The Mundane" href="https://tznind.github.io/mw/cs.html?role=The+Mundane&name=Luis+Payne&player=F&pronouns=She%2FHer&look=Confident+professional+woman+with+dark+hair%2C+sharp+eyes%2C+and+tailored+outfit.&charm=%2B2&cool=%2B1&sharp=%2B2&tough=%2B0&weird=-1&move_mu2_p1=1&move_mu2_p3=1&move_mu3_pickone=3&move_mu1=1&move_mu4=1&move_mu10=1&move_mui_p3=1&history_cnt=3&history_0_name=Soops&history_0_details=Romantically+involved+with+the+flying+boyscout&history_1_name=Dr+Pamela&history_1_details=Good+friends.+Shes+going+to+help+me+with+my+hanging+baskets+project%21&history_2_details=You+saved+their+life+from+a+monster+due+to+an+unlikely+chain+of+events.+I+tripped+over+a+bucket+of+magic+sunlight+that+time+he+was+fighting+vlad.&history_2_name=Angelicious&track_luck=2&track_harm=3&track_xp=4&hide_untaken=1">Luis&nbsp;Payne</a>
+          </td>
                      </tr>
 </table>
 
