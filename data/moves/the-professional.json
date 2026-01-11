@@ -163,7 +163,6 @@
       },
       {
         "title": "Bad Things",
-        "description": "Choose one:",
         "pickOne": [
           "Loud",
           "Obvious",
