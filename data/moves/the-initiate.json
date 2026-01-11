@@ -161,7 +161,7 @@
   {
     "id": "i3",
     "title": "Old Fashioned Weapons",
-    "description": "If your Sect has fighting arts or obsolete gear then pick three old-fashioned weapons, otherwise pick two:",
+    "description": "If your Sect has *fighting arts* or *obsolete gear* then pick three old-fashioned weapons, otherwise pick two:",
     "weight": -1,
     "hideCheckbox": true,
     "pick": [
