@@ -103,7 +103,8 @@
       "Hunting rifle (3-harm far loud reload)",
       "Sledge-hammer or fire axe (3-harm hand messy)",
       "Nunchuks (2-harm hand area)"
-    ]
+    ],
+    "details": true
   },
   {
     "id": "mu3",
