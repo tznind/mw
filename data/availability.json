@@ -105,6 +105,7 @@
       "Charm-1, Cool-1, Sharp+2, Tough 0, Weird+2"
     ],
     "luckSpecial":"When you spend a point of Luck, pick an aspect of the current situation. The Keeper will tell you what other conspiracies that aspect connects to",
+    "fsm":true,
     "f1": false,
     "f2": true,
     "f3": true,
