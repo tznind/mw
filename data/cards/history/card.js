@@ -42,9 +42,8 @@ window.CardInitializers.history = function(container, suffix) {
             const result = await window.Wizard.show(wizardData);
 
             if (result && result.length > 0) {
-                // Wizard returns the index, not the text
-                const selectedIndex = result[0];
-                const selectedText = optionsArray[selectedIndex];
+                // Wizard returns the actual selected text
+                const selectedText = result[0];
 
                 // Add row with values directly
                 helpers.addTableRow('history', {
