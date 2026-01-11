@@ -1,0 +1,22 @@
+/* History card styling */
+
+.history-card table {
+    width: 100%;
+}
+
+.history-card th[data-field="name"] {
+    width: 150px;
+}
+
+.history-card th[data-field="details"] {
+    width: auto;
+}
+
+.history-card input[id*="_details"] {
+    width: 100%;
+    min-width: 300px;
+}
+
+.history-card input[id*="_name"] {
+    width: 140px;
+}

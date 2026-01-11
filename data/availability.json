@@ -311,7 +311,7 @@
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
     "description": "Universal moves available to all characters.",
-    "cards": [],
+    "cards": ["history"],
     "e1": false,
     "kick": true,
     "act-pressure": true,

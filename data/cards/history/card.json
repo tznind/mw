@@ -1,0 +1,13 @@
+{
+  "id": "history",
+  "title": "History",
+  "path": "data/cards/history",
+  "description": "Track relationships and shared history with other hunters",
+  "version": "1.0.0",
+  "author": "System",
+  "files": {
+    "html": "card.html",
+    "css": "card.css",
+    "js": "card.js"
+  }
+}
