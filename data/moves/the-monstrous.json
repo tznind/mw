@@ -100,14 +100,7 @@
     "description": "You’re half-human, half-monster: decide if you were always this way or if you you were originally human and transformed somehow.\n\nNow decide if you were always fighting to be good, or if you were evil and changed sides.\n\nDefine your monstrous breed by picking a curse, moves, and natural attacks.\n\n Create the monster you want to be: whatever you choose defines your breed in the game.",
     "takeFrom": [
       "Curses"
-    ],
-    "submoves": [
-      {
-        "title": "Starting Moves",
-        "description": "Choose two Monstrous Moves"
-      }
     ]
-
   },
   {
     "id":"cur1",
@@ -190,7 +183,13 @@
       "Take a move from another playbook",
       "Take a move from another playbook"
     ],
-    "details": true
+    "details": true,
+    "submoves": [
+      {
+        "title": "Starting Moves",
+        "description": "Choose two Monstrous Moves"
+      }
+    ]
   },
   {
     "id": "mai",
