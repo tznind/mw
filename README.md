@@ -12,7 +12,11 @@ It is online at https://tznind.github.io/mw/cs.html
     </td>
     <td width="33%">
     🚬&nbsp;<a title="The Crooked" href="https://tznind.github.io/mw/cs.html?name=John+Conman&player=Jon&pronouns=He%2FHim&look=Gaunt+blond+man+in+a+battered+trench+coat%2C+chain-smoking%2C+eyes+full+of+regret.&role=The+Crooked&charm=%2B2&cool=%2B0&sharp=%2B1&tough=-1&weird=%2B1&track_luck=3&track_xp=2&move_cr9_p4=1&cr9sp=Lucifer&cr9dn=Whichford&move_cr9_p1=1&move_cr10_pickone=4&move_cr10_dtl=A+fun+ritual+with+friends+got+way+out+of+hand.&takeFrom_crx_role=Background&takeFrom_crx_move=rb6&move_cr11_p7=1&move_cr11_p6=1&move_cr11_p1=1&move_cr1=1&move_cr1_pickone=2&move_cr7=1&move_cr7_dtl=London+England&move_cri_p9=1&move_cri_p10=1&move_e1_1=1&move_e1_2=1&takeFrom_e1_role=The+Expert&takeFrom_e1_move=ex7&track_ex7=2&takeFrom_e1_2_role=The+Initiate&takeFrom_e1_2_move=i12&hide_untaken=1&history_cnt=3&history_0_name=Ches+Chandelier&history_0_details=This+hunter+knows+about+your+criminal+past.++They+saw+me+smaking+illegal+deals+and+that+time+I+got+everyone+killed...&history_1_name=Sheryl+Massers&history_1_details=This+hunter+is+your+younger+sibling+or+child+%28possibly+adopted%29.+You+look+out+for+them.+I%27m+a+bad+influence+I+know..+it+won%27t+end+well&history_2_details=This+hunter+saved+your+life+when+a+monster+had+the+drop+on+you.+Now+you+owe+them+one.+It+was+this+one+time+in+the+swamp+-+ouch&history_2_name=Thwamp+Sing">John&nbsp;Conman</a>
-  </tr>
+             </td>
+             <td width="33%">
+             ♜&nbsp;<a title="The Divine" href="https://tznind.github.io/mw/cs.html?role=The+Divine&name=Castle&player=Me&pronouns=He%2FHim&look=A+rumpled+trench+coat%2C+loosened+tie%2C+and+an+intense%2C+otherworldly+stare.&move_dg_pickone=1&doarm=magic%2C+appearing+only+when+needed&move_dm_pickone=1&move_d1=1&move_d2=1&move_d4=1&move_d5=1&move_di_p6=1&move_di_p7=1&move_di_p1=1&charm=-1&cool=%2B0&sharp=%2B1&tough=%2B3&weird=%2B1&track_luck=2">Castle</a>
+    </td>
+      </tr>
 </table>
 
 ---
