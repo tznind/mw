@@ -27,6 +27,10 @@ It is online at https://tznind.github.io/mw/cs.html
         <td>🥩&nbsp;<a title="The Initiate" href="https://tznind.github.io/mw/cs.html?role=The+Initiate&name=Bouffe+Winters&player=D&pronouns=She%2FHer&look=Blonde+teen+in+casual+clothes%2C+fierce+eyes%2C+ready+to+fight+monsters.&charm=-1&cool=%2B0&sharp=-1&tough=%2B2&weird=%2B2&move_i13_dtl=The+Monster+Slayer+council&move_i14_p1=1&move_i14_p4=1&move_i15_pickone=9&move_i5=1&move_i3_p6=1&move_i3_p5=1&move_i3_p9=1&move_i4_p3=1&move_i9=1&mentor_name=%27Jolly%27+Jyles+the+Librarian&move_i11=1&hide_untaken=1&history_cnt=3&history_0_name=F8&history_0_details=They+are+a+lay+member+of+your+Sect.+When+I+passed+out+skiing+and+the+ancient+curse+thought+a+new+Slaughterer+was+needed+she+sprang+up.&history_1_name=Sunset&history_1_details=They%27re+described+in+the+prophecies%2C+but+the+role+they+will+play+isn%27t+stated.++My+magical+sister+from+another+Mister+%28A+wizard+mister+via+magic%29&history_2_details=An+ex-member+of+the+Sect%2C+but+still+friends.+The+first+Sluaghterer+-+thrown+out+for+not+following+orders+and+being+as+old+as+time.&history_2_name=First">Bouffe&nbsp;Winters</a>
         </td>
       </tr>
+                     <tr>
+                     <td width="33%">🧛&nbsp;<a title="The Monstrous" href="https://tznind.github.io/mw/cs.html?role=The+Monstrous&name=Angelicious&player=Ant&pronouns=He%2FHim&look=Wearing+cool+leather+coat+and+tousled+black+hair+-+I%27ve+a+face+everyone+loves+or+loves+to+hate.&charm=%2B2&cool=%2B0&sharp=-1&tough=-1&weird=%2B3&track_luck=3&track_harm=4&unstable=1&track_xp=3&history_cnt=2&history_0_name=Bouff%C3%A9+Winters&history_0_details=You+lost+control+one+time%2C+and+almost+killed+them.+It+was+when+I+was+romantically+feeding+and+it+went+too+far.&history_1_details=You+fought+together+against+the+odds%2C+and+prevailed.+My+vampire+bromance+partner.&history_1_name=Spoke&takeFrom_mb_role=Curses&takeFrom_mb_move=cur2&move_cur2_dtl=Sunlight%2C+I%27m+a+vampire&move_cn_p1=1&move_cn_p6=1&move_m2_pickone=6&move_m1=1&move_m9=1&hide_untaken=1">Angelicious</a>
+            </td>
+                     </tr>
 </table>
 
 ---
