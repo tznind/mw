@@ -4,7 +4,7 @@
     "title": "Get a move from another playbook",
     "description": "Mark this move when you take the respective Improvement.",
     "multiple": 2,
-    "category": "Improvement",
+    "weight": 4,
     "takeFrom": ["*"],
     "takeCategory": ["Moves"]
   },

@@ -117,7 +117,8 @@
     "f9": false,
     "f10": false,
     "fi": true,
-    "fai": true
+    "fai": true,
+    "fsh":false
   },
   "The Initiate":{
     "_movesFile": "data/moves/the-initiate.json",

@@ -7,6 +7,44 @@
     "description": "You get all of the basic moves, plus pick three Flake moves"
   },
   {
+    "id": "fsh",
+    "title": "🏠Haven (Requires Improvement)",
+    "weight": 5,
+    "hideCheckbox": true,
+    "description": "Mark this if you have taken the requisite Improvement.\nYou have set up a haven, a safe place to work. Pick **two** of the options below for your haven:",
+    "pick": [
+      "**Lore Library.** When you hit the books, take +1 forward to investigate the mystery (as long as historical or reference works are appropriate).",
+      "**Mystical Library.** If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for use magic.",
+      "**Protection Spells.** Your haven is safe from monsters—they cannot enter. Monsters might be able to do something special to evade the wards, but not easily.",
+      "**Armory.** You have a stockpile of mystical and rare monster-killing weapons and items (see move below).",
+      "**Infirmary.** You can heal people, and have the space for one or two to recuperate. The Keeper will tell you how long any patient's recovery is likely to take, and if you need extra supplies or help.",
+      "**Workshop.** You have a space for building and repairing guns, cars and other gadgets. Work out with the Keeper how long any repair or construction will take, and if you need extra supplies or help.",
+      "**Oubliette.** This room is isolated from every kind of monster, spirit and magic that you know about. Anything you stash in there can't be found, can't do any magic, and can't get out.",
+      "**Panic Room.** This has essential supplies and is protected by normal and mystical means. You can hide out there for a few days, safe from pretty much anything.",
+      "**Magical Laboratory.** You have a mystical lab with all kinds of weird ingredients and tools useful for casting spells (like the use magic move, big magic, and any other magical moves)."
+    ],
+    "submoves": [
+      {
+        "title": "Armory (+Weird)",
+        "description": "If you need a special weapon, roll +Weird.",
+        "outcomes": [
+          {
+            "range": "≥ 10",
+            "text": "you have it (and plenty if that matters)"
+          },
+          {
+            "range": "7-9",
+            "text": "you have it, but only the minimum"
+          },
+          {
+            "range": "≤ 6",
+            "text": "you've got the wrong thing."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "f1",
     "title": "Connect the Dots (+Sharp)",
     "description": "At the beginning of each mystery, if you look for the wider patterns that current events might be part of, roll +Sharp.",
