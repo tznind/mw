@@ -213,6 +213,12 @@
       "Take a move from another playbook",
       "Take a move from another playbook"
     ],
+    "submoves": [
+      {
+        "title": "Mystical Library",
+        "description": "Mystical Library. If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for **use magic**."
+      }
+    ],
     "details": true
   },
   {
