@@ -63,7 +63,18 @@
     "id": "ss11",
     "title": "Practitioner",
     "description": "Choose two effects available to you under **use magic**. Take +1 to **use magic** whenever you choose one of those effects.",
-    "details": true
+    "pick":[
+      "Inflict harm",
+      "Enchant a weapon",
+      "Do one thing that is beyond human limitations.",
+      "Bar a place or portal to a specific person or a type of creature.",
+      "Trap a specific person, minion, or monster.",
+      "Banish a spirit or curse from the person, object, or place it inhabits.",
+      "Summon a monster into the world.",
+      "Communicate with something that you do not share a language with.",
+      "Observe another place or time.",
+      "Heal"
+    ]
   },
   {
     "id": "ss12",
