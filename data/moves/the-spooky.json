@@ -62,6 +62,12 @@
     "id": "sp5",
     "title": "Premonitions (+Weird)",
     "description": "At the start of each mystery, roll +Weird.",
+    "tracks": [
+      {
+        "name": "Keeper Hold",
+        "max": 3
+      }
+    ],
     "outcomes": [
       {
         "range": "≥ 10",
