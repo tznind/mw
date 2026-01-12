@@ -65,7 +65,8 @@
     "tracks": [
       {
         "name": "Keeper Hold",
-        "max": 3
+        "max": 3,
+        "shape": "hexagon"
       }
     ],
     "outcomes": [
@@ -150,6 +151,11 @@
         "name": "Hold",
         "max": 2,
         "shape": "square"
+      },
+      {
+        "name": "Keeper Hold",
+        "max": 2,
+        "shape": "hexagon"
       }
     ],
     "outcomes": [

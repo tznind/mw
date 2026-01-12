@@ -117,6 +117,11 @@
         "name": "Hold",
         "max": 2,
         "shape": "square"
+      },
+      {
+        "name": "Keeper Holds",
+        "max": 1,
+        "shape": "hexagon"
       }
     ],
     "outcomes": [
