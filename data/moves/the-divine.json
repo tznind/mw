@@ -166,6 +166,21 @@
       "Erase one used Luck mark from your playbook",
       "Change your mission. Select a different mission from the normal options, or (with the Keeper's agreement) a new mission of your creation"
     ],
-    "details": true
+    "details": true,
+    "submoves": [
+      {
+        "title": "Advanced Moves",
+        "pick": [
+          "Kick Some Ass",
+          "Act Under Pressure",
+          "Help Out",
+          "Investigate A Mystery",
+          "Manipulate Someone",
+          "Protect Someone",
+          "Read A Bad Situation",
+          "Use Magic"
+        ]
+      }
+    ]
   }
 ]

@@ -253,6 +253,21 @@
       "Get some or all of the other players' hunters hired by your agency. They get the deal with the agency move, as well as salary and benefits",
       "Get back one used Luck point"
     ],
-    "details": true
+    "details": true,
+    "submoves": [
+      {
+        "title": "Advanced Moves",
+        "pick": [
+          "Kick Some Ass",
+          "Act Under Pressure",
+          "Help Out",
+          "Investigate A Mystery",
+          "Manipulate Someone",
+          "Protect Someone",
+          "Read A Bad Situation",
+          "Use Magic"
+        ]
+      }
+    ]
   }
 ]

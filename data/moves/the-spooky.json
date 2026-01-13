@@ -237,6 +237,21 @@
       "You discover how to use your powers at a lower price. Delete one dark side tag permanently",
       "Get back one used Luck point"
     ],
-    "details": true
+    "details": true,
+    "submoves": [
+      {
+        "title": "Advanced Moves",
+        "pick": [
+          "Kick Some Ass",
+          "Act Under Pressure",
+          "Help Out",
+          "Investigate A Mystery",
+          "Manipulate Someone",
+          "Protect Someone",
+          "Read A Bad Situation",
+          "Use Magic"
+        ]
+      }
+    ]
   }
 ]
