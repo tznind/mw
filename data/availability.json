@@ -305,7 +305,8 @@
     "w12": false,
     "w13": false,
     "wi": true,
-    "wai": true
+    "wai": true,
+    "fsh": false
   },
   "Everyone": {
     "_movesFile": "data/moves/everyone.json",
