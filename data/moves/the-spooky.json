@@ -23,16 +23,6 @@
 "Hallucinations",
 "Pain",
 "Paranoia"
-    ],
-    "submoves": [
-      {
-        "title": "Ask",
-        "description": "The Keeper can ask you to do nasty things (in accordance with the tags), when your  powers need you to. If you do whatever is asked, mark experience. If you don’t do it, then your powers are unavailable until the end of the mystery (or until you cave). As you mark off Luck boxes, these requests will get bigger and nastier"
-      },
-      {
-        "title": "Starting Moves",
-        "description": "You get three Spooky Moves"
-      }
     ]
   },
   {
@@ -193,6 +183,16 @@
       "Hunting rifle (2-harm far loud)",
       "Shotgun (3-harm close messy)",
       "Big knife (1-harm hand)"
+    ],
+    "submoves": [
+      {
+        "title": "Ask",
+        "description": "The Keeper can ask you to do nasty things (in accordance with the tags), when your  powers need you to. If you do whatever is asked, mark experience. If you don’t do it, then your powers are unavailable until the end of the mystery (or until you cave). As you mark off Luck boxes, these requests will get bigger and nastier"
+      },
+      {
+        "title": "Starting Moves",
+        "description": "You get three Spooky Moves"
+      }
     ]
   },
   {
@@ -216,7 +216,7 @@
     "submoves": [
       {
         "title": "Mystical Library",
-        "description": "Mystical Library. If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for **use magic**."
+        "description": "If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for **use magic**."
       }
     ],
     "details": true
