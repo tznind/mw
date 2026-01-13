@@ -164,6 +164,21 @@
       "Change the target of your vengeful rage. Pick a new monster breed: I know my prey now applies to them instead",
       "Get back one used Luck point"
     ],
-    "details": true
+    "details": true,
+    "submoves": [
+      {
+        "title": "Advanced Moves",
+        "pick": [
+          "Kick Some Ass",
+          "Act Under Pressure",
+          "Help Out",
+          "Investigate A Mystery",
+          "Manipulate Someone",
+          "Protect Someone",
+          "Read A Bad Situation",
+          "Use Magic"
+        ]
+      }
+    ]
   }
 ]
