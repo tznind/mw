@@ -46,7 +46,7 @@ It is online at https://tznind.github.io/mw/cs.html
                                      </tr>
 </table>
 
----
+<img width="1209" height="790" alt="image" src="https://github.com/user-attachments/assets/b8f77844-1b0a-4145-913a-12f88125c090" />
 
 See https://github.com/tznind/lc for main template repository.
 
